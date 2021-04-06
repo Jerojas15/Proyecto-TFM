@@ -56,11 +56,18 @@ public class PlayerP : MonoBehaviour
     /*Canvas*/
     [SerializeField] private Text txtMecanicas;
 
+    /*Animator*/
+    Animator animator;
+    Controller2D controller;
+
+    /*Oscurdiad*/
+    public GameObject oscuridad;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
         sistemaSentimientos = SentimientosP.SentimientosConfig;
+        animator = GetComponent<Animator>();
 
         /*for (int i = 0; i < Sentimientos.SentimientosConfig.Count; i++)
         {
@@ -83,7 +90,7 @@ public class PlayerP : MonoBehaviour
         //rocaRB = roca.GetComponent<Rigidbody2D>();
         fuerzaActualPlayer = 1;
         mapeoSentimiento = 1;
-        cambiarMecanicasSentimientos(mapeoSentimiento);
+        CambiarMecanicasSentimientos(mapeoSentimiento);
     }
 
     void Update()
@@ -108,19 +115,33 @@ public class PlayerP : MonoBehaviour
                 this.mapeoSentimiento = 0;
             }
             fuerzaActualPlayer = sistemaSentimientos[mapeoSentimiento][10];
-            cambiarMecanicasSentimientos(mapeoSentimiento);
+            CambiarMecanicasSentimientos(mapeoSentimiento);
         }
 
         lanzarObjeto();
+        /* OCULTAR OBJETOS OSCURIDAD*/
+        if (Input.GetKeyDown(KeyCode.Z) && oscuridad.activeSelf == false)
+
+        {
+            oscuridad.SetActive(true);
+        }
+        else if (Input.GetKeyDown(KeyCode.Z) && oscuridad.activeSelf == true)
+        {
+            oscuridad.SetActive(false);
+        }
 
     }
-    void FixedUpdate()
+
+
+
+     
+void FixedUpdate()
     {
         verificarPiso();
     }
 
 
-    void cambiarMecanicasSentimientos(int mapeoSentimiento)
+    void CambiarMecanicasSentimientos(int mapeoSentimiento)
     {
         this.vida = sistemaSentimientos[mapeoSentimiento][0];
         this.energia = sistemaSentimientos[mapeoSentimiento][1];
@@ -173,10 +194,13 @@ public class PlayerP : MonoBehaviour
             veloCaminar = velocidadMovimientoInicial;
             rb.gravityScale = gravedadInicial;
         }
+
+       
     }
 
     void Salto()
     {
+        animator.SetTrigger("doJump");
         if (estaEnPiso == true)
         {
             saltosExtra = numSaltosExtra;
@@ -230,6 +254,7 @@ public class PlayerP : MonoBehaviour
 
         if (mirarDerecha == false && inputMovimiento > 0)
         {
+
             RotarSprite();
         }
         else if (mirarDerecha == true && inputMovimiento < 0)

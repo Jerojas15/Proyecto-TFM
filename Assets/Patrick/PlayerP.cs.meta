@@ -3,7 +3,11 @@ guid: c1ca32cd8a914424396d9bff07fb806d
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - chequearPiso: {instanceID: 0}
+  - roca: {fileID: 8178726054949838528, guid: fa648fdc1b97fdd41be1f4f3b97a4d44, type: 3}
+  - posLanzamiento: {instanceID: 0}
+  - txtMecanicas: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
