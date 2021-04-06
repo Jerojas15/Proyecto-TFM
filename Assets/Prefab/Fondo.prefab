@@ -1,23 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!68 &4569068571814174058
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4358082889615086333}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -20.48, y: 0}
-  - {x: 20.48, y: 0}
 --- !u!1 &6664878815609570966
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,12 +370,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a85cdc699714c1d4d88f01d821abfbd8, type: 3}
---- !u!1 &4358082889615086333 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1024145523772736, guid: a85cdc699714c1d4d88f01d821abfbd8,
-    type: 3}
-  m_PrefabInstance: {fileID: 4357415399987584957}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4356785784210185765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4168997402722712, guid: a85cdc699714c1d4d88f01d821abfbd8,

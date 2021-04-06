@@ -6,6 +6,7 @@ TagManager:
   tags:
   - desaparecer
   - rocaGigante
+  - piso
   layers:
   - Default
   - TransparentFX

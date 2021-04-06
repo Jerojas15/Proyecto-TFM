@@ -200,7 +200,7 @@ void FixedUpdate()
 
     void Salto()
     {
-        animator.SetTrigger("doJump");
+        
         if (estaEnPiso == true)
         {
             saltosExtra = numSaltosExtra;
