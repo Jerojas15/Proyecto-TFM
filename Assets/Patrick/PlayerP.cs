@@ -281,7 +281,7 @@ void FixedUpdate()
         if (Input.GetMouseButtonUp(0))
         {
             float tiempoApretado = Time.time - timerFuerzaLanzarObjetos;
-            Instantiate(roca, posLanzamiento.transform.position, posLanzamiento.transform.rotation);
+            Instantiate(roca, posLanzamiento.transform.position, transform.rotation);
         }
 
     }
