@@ -3126,7 +3126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 486375226}
   - component: {fileID: 486375227}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SombraPasto (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3587,6 +3587,36 @@ EdgeCollider2D:
   - {x: -31.629807, y: -2.8902254}
   - {x: -31.629807, y: -2.8902254}
   - {x: 45.86241, y: -3.1118183}
+--- !u!1 &531073849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 531073850}
+  m_Layer: 8
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &531073850
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531073849}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1967475378}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &556200764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6518,7 +6548,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123215182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 268.55426, y: 4.4425383, z: -10}
+  m_LocalPosition: {x: 268.52795, y: 4.442461, z: -10}
   m_LocalScale: {x: 0.99691594, y: 0.99691594, z: 0.99691594}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9172,7 +9202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484826854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 268.5527, y: 0.6001179, z: -10}
+  m_LocalPosition: {x: 268.5264, y: 0.6001179, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1336860267}
@@ -11210,8 +11240,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1967475378}
   - component: {fileID: 1967475377}
-  m_Layer: 0
-  m_Name: GameObject
+  m_Layer: 8
+  m_Name: Piso
   m_TagString: piso
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11247,7 +11277,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 236.7259, y: 175.28667, z: -140.00401}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 531073850}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12287,6 +12318,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818802977445060053, guid: 922a86c8daab51c45a7027494ccb6560,
+        type: 3}
+      propertyPath: m_TagString
+      value: piso
       objectReference: {fileID: 0}
     - target: {fileID: 3758011323247466397, guid: 922a86c8daab51c45a7027494ccb6560,
         type: 3}

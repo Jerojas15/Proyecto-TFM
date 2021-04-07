@@ -101,6 +101,10 @@ public class PlayerP : MonoBehaviour
         inputMovimiento = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(inputMovimiento * veloCaminar, rb.velocity.y);
 
+        animator.SetFloat("speedY", Mathf.Abs(rb.velocity.y));
+        animator.SetFloat("speedX", Mathf.Abs(rb.velocity.x));
+        // animator.SetBool("isWallSliding", inputMovimiento != 0);
+
         Correr();
 
         Salto();
@@ -201,6 +205,7 @@ void FixedUpdate()
     void Salto()
     {
         
+
         if (estaEnPiso == true)
         {
             saltosExtra = numSaltosExtra;
@@ -212,7 +217,9 @@ void FixedUpdate()
         }
         else if (Input.GetKeyDown(KeyCode.Space) && saltosExtra == 0 && estaEnPiso == true)
         {
+            animator.SetTrigger("doJump");
             rb.velocity = Vector2.up * (fuerzaSalto + fuerzaAdicSalto);
+
         }
     }
 
@@ -251,6 +258,8 @@ void FixedUpdate()
     void verificarPiso()
     {
         estaEnPiso = Physics2D.OverlapCircle(chequearPiso.position, radioChequeo, cualEsPiso);
+
+        animator.SetBool("isGrounded", estaEnPiso);
 
         if (mirarDerecha == false && inputMovimiento > 0)
         {
