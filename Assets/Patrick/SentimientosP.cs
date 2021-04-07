@@ -30,7 +30,7 @@ public class SentimientosP : MonoBehaviour
 
     static public Dictionary<int, List<float>> SentimientosConfig = new Dictionary<int, List<float>>();
     static public List<float> mundoOscuridad = new List<float>{      100, 50,  2, 2,    1,    5, 1,     0, 0.1f,  1, 0.5f, 25 }; 
-    static public List<float> estadoNormal = new List<float>{        100, 100, 4, 2,    8,    4, 0.75f, 0, 1,     0, 1,    -1 }; //-1 para infinito
+    static public List<float> estadoNormal = new List<float>{        100, 100, 6, 2,    8,    8, 0.75f, 0, 1,     0, 1,    -1 }; //-1 para infinito
     static public List<float> estadoTristeza = new List<float>{      100, 50,  2, 0.5f, 4,    2, 0.5f,  1, 0.5f,  0, 0.5f, 20 };
     static public List<float> estadoOdio = new List<float>{          100, 50,  5, 0.5f, 9,    5, 1,     1, 2,     0, 1.5f, 20 };
     static public List<float> estadoEnvidia = new List<float>{       100, 50,  3, 0.5f, 5,    3, 0.25f, 5, 1.5f,  0, 2,    20 };

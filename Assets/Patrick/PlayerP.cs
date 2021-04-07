@@ -107,7 +107,7 @@ public class PlayerP : MonoBehaviour
 
         Dash();
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             this.mapeoSentimiento++;
             if (this.mapeoSentimiento == 8)
