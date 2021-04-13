@@ -285,4 +285,20 @@ void FixedUpdate()
         }
 
     }
+
+    public void reducirVida(int valor) {
+        this.vida -= valor;
+        Debug.Log("Hace dano, vida: " + this.vida);
+    }
+
+    public void reducirVelocidad(float porcentaje) {
+        Debug.Log(1 - (float)(porcentaje / 100));
+        this.velocidadMovimientoInicial *= (float)(1 - (float)(porcentaje / 100));
+        this.veloAdicCorrer *= (float) (1 - (float)(porcentaje / 100));
+    }
+
+    public void restaurarVelocidad() {
+        this.velocidadMovimientoInicial = sistemaSentimientos[mapeoSentimiento][2];
+        this.veloAdicCorrer = sistemaSentimientos[mapeoSentimiento][3];
+    }
 }
