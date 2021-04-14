@@ -24,12 +24,15 @@ public class PlayerP : MonoBehaviour
     [SerializeField] private float veloCaminar;
     [SerializeField] private float veloAdicCorrer; // correr: se SUMA la velocidad adicional
     [SerializeField] private float velocidadDash;
-    private float duracionDash;        // cuanto dura el dash
+    private float duracionDash = 0.05f;        // cuanto dura el dash
+    private float tiempoDash = 1;
     [SerializeField] private float inicioTiempoDash;    // variable para finalizar el dash (tiempo)
     private float inputMovimiento;
     private float velocidadMovimientoInicial;
-    private int direccion;
+    private float direccion = 1;
+    private bool isDashing;
     private bool permitirDash = true;
+    IEnumerator dashCoroutine;
 
     /*Salto y Gravedad*/
     [Header("Salto y Gravedad")]
@@ -60,7 +63,7 @@ public class PlayerP : MonoBehaviour
     Animator animator;
     Controller2D controller;
 
-    /*Oscurdiad*/
+    /*Oscuridad*/
     public GameObject oscuridad;
     void Start()
     {
@@ -97,6 +100,11 @@ public class PlayerP : MonoBehaviour
     {
 
         //cambiarMecanicasSentimientos(mapeoSentimiento);
+
+        if(inputMovimiento != 0)
+        {
+            direccion = inputMovimiento;
+        }
 
         inputMovimiento = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(inputMovimiento * veloCaminar, rb.velocity.y);
@@ -142,6 +150,10 @@ public class PlayerP : MonoBehaviour
 void FixedUpdate()
     {
         verificarPiso();
+        if(isDashing)
+        {
+            rb.AddForce(new Vector2(direccion * velocidadDash,0), ForceMode2D.Impulse);
+        }
     }
 
 
@@ -181,9 +193,17 @@ void FixedUpdate()
     void RotarSprite()
     {
         mirarDerecha = !mirarDerecha;
-        Vector3 rotacion = transform.localScale;
+        /*Vector3 rotacion = transform.localScale;
         rotacion.x *= -1;
         this.transform.localScale = rotacion;
+        Quaternion rotacionLanzamiento = Quaternion.Inverse(posLanzamiento.transform.rotation);
+        posLanzamiento.transform.rotation = rotacionLanzamiento;*/
+        Quaternion actualRotacion;
+        if(mirarDerecha)
+        actualRotacion = Quaternion.AngleAxis(0,Vector3.up);
+        else
+            actualRotacion = Quaternion.AngleAxis(180, Vector3.up);
+        transform.rotation = actualRotacion;
     }
 
     void Correr()
@@ -225,34 +245,15 @@ void FixedUpdate()
 
     void Dash()
     {
-        /*if(rb.velocity == Vector2.zero)
+        if(Input.GetKeyDown(KeyCode.G) && permitirDash == true)
         {
-            permitirDash = true;
-        }*/
-
-        /*if(Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            permitirDash = true;
-        }*/
-
-        /*if(permitirDash)
+            if(dashCoroutine != null)
             {
-                if (duracionDash <= 0)
-                {
-                    duracionDash = inicioTiempoDash;
-                    Debug.Log("if " + duracionDash);
-                }
-                else
-                {
-                    duracionDash -= Time.deltaTime;
-                    Debug.Log("else " + duracionDash);
-                    if (inputMovimiento > 0) rb.velocity = new Vector2(velocidadMovimiento * velocidadDash, rb.velocity.y);
-                    else if (inputMovimiento < 0)
-                        rb.velocity = new Vector2(-1 * velocidadMovimiento * velocidadDash, rb.velocity.y);
-                }
+                StopCoroutine(dashCoroutine);
             }
-            permitirDash = false;*/
-
+            dashCoroutine = DashCoroutine(duracionDash, tiempoDash);
+            StartCoroutine(dashCoroutine);
+        }
     }
 
     void verificarPiso()
@@ -281,9 +282,8 @@ void FixedUpdate()
         if (Input.GetMouseButtonUp(0))
         {
             float tiempoApretado = Time.time - timerFuerzaLanzarObjetos;
-            Instantiate(roca, posLanzamiento.transform.position, transform.rotation);
+            Instantiate(roca, posLanzamiento.transform.position, posLanzamiento.transform.rotation);
         }
-
     }
 
     public void reducirVida(int valor) {
@@ -300,5 +300,19 @@ void FixedUpdate()
     public void restaurarVelocidad() {
         this.velocidadMovimientoInicial = sistemaSentimientos[mapeoSentimiento][2];
         this.veloAdicCorrer = sistemaSentimientos[mapeoSentimiento][3];
+    }
+
+    IEnumerator DashCoroutine(float dashDuracion, float dashTiempoCalma)
+    {
+        isDashing = true;
+        permitirDash = false;
+        rb.gravityScale = 0;
+        rb.velocity = Vector2.zero;
+        yield return new WaitForSeconds(dashDuracion);
+        isDashing = false;
+        rb.gravityScale = gravedadInicial;
+        rb.velocity = new Vector2(velocidadMovimientoInicial,0);
+        yield return new WaitForSeconds(dashTiempoCalma);
+        permitirDash = true;
     }
 }
