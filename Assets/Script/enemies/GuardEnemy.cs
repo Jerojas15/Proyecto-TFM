@@ -28,6 +28,7 @@ public class GuardEnemy : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject == start || collision.gameObject == end) {
+            transform.Rotate(Vector3.down * 180);
             target = 1 - target;
         } else if (collision.gameObject.CompareTag("Player")) {
             collision.gameObject.GetComponent<PlayerP>().reducirVida(strength);
