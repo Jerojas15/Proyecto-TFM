@@ -12,6 +12,9 @@ public class ColorChanger : MonoBehaviour {
     private GameObject startPoint;
 
     [SerializeField]
+    private float fullRadius;
+
+    [SerializeField]
     private GameObject player;
 
     void Start() {
@@ -41,15 +44,26 @@ public class ColorChanger : MonoBehaviour {
         if (!isActive) {
             if (playerDistance < pointsDistance) {
                 colorGrading.active = true;
-                float percentage = 1 - (playerDistance / pointsDistance);
                 colorGrading.enabled.value = true;
                 colorGrading.colorFilter.value = new Color(1, 1, 1, 1);
-                colorGrading.lift.value = new Vector4(1 * percentage, 0, 0, 0);
-                colorGrading.gamma.value = new Vector4(1 * percentage, 0, 0, 0);
-                colorGrading.gain.value = new Vector4(1 * percentage, 0, 0, 0);
+                if (playerDistance <= fullRadius) {
+                    colorGrading.lift.value = new Vector4(1, 0, 0, 0);
+                    colorGrading.gamma.value = new Vector4(1, 0, 0, 0);
+                    colorGrading.gain.value = new Vector4(1, 0, 0, 0);
+                } else {
+                    float percentage = 1 - (playerDistance / pointsDistance);
+                    colorGrading.lift.value = new Vector4(1 * percentage, 0, 0, 0);
+                    colorGrading.gamma.value = new Vector4(1 * percentage, 0, 0, 0);
+                    colorGrading.gain.value = new Vector4(1 * percentage, 0, 0, 0);
+                }
             } else {
                 colorGrading.active = false;
             }
         }
+    }
+
+    void OnDrawGizmosSelected() {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(startPoint.transform.position, fullRadius);
     }
 }
