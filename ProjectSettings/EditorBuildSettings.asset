@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Villa.unity
     guid: 765a31591d09eb1428475abc5bf58339
+  - enabled: 1
+    path: Assets/Scenes/Puente.unity
+    guid: 0cab151a6bf0e7840979ccabc6511b31
   m_configObjects: {}
