@@ -65,6 +65,7 @@ public class PlayerP : MonoBehaviour
 
     /*Oscuridad*/
     public GameObject oscuridad;
+    public GameObject oscuridadact;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -141,6 +142,18 @@ public class PlayerP : MonoBehaviour
         {
             oscuridad.SetActive(false);
         }
+
+        /* OCULTAR OBJETOS OSCURIDAD*/
+        if (Input.GetKeyDown(KeyCode.Z) && oscuridadact.activeSelf == false)
+
+        {
+            oscuridadact.SetActive(true);
+        }
+        else if (Input.GetKeyDown(KeyCode.Z) && oscuridadact.activeSelf == true)
+        {
+            oscuridadact.SetActive(false);
+        }
+
 
     }
 
