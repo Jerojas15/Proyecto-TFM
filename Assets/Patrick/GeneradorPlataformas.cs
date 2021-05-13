@@ -8,29 +8,39 @@ public class GeneradorPlataformas : MonoBehaviour
     [SerializeField] private Transform inicioNivel;
     [SerializeField] private List<Transform> listaPlataformas;
     [SerializeField] private PlayerP player;
+    [SerializeField] private int numPlataformasFinal;
 
     private Vector3 ultimaPosicionFinal;
+    private int numActualPlataformas;
     private void Awake()
     {
         ultimaPosicionFinal = inicioNivel.Find("PosicionFinal").position;
-        /*int numPlataformas = 2;
-        for(int i = 0; i < numPlataformas; i++)
-        {
-            GenerarPlataforma();
-        }*/
+        numActualPlataformas = 0;
     }
 
     private void Update()
     {
-        if(Vector3.Distance(player.transform.position,ultimaPosicionFinal) < distanciaParaGenerarPlataforma)
+        if(Vector3.Distance(player.transform.position,ultimaPosicionFinal) < distanciaParaGenerarPlataforma && numActualPlataformas < numPlataformasFinal)
         {
             GenerarPlataforma();
+            numActualPlataformas++;
+        }
+        else if (Vector3.Distance(player.transform.position, ultimaPosicionFinal) < distanciaParaGenerarPlataforma && numActualPlataformas == numPlataformasFinal)
+        {
+            Transform plataformaEscogida = listaPlataformas[listaPlataformas.Count-1];
+            Transform ultimaPosicionFinalPlataforma = GenerarPlataforma(plataformaEscogida, ultimaPosicionFinal);
+            ultimaPosicionFinal = ultimaPosicionFinalPlataforma.Find("PosicionFinal").position;
+            numActualPlataformas++;
+        }
+        else if (numActualPlataformas > numPlataformasFinal)
+        {
+            //Debug.Log("hola");
         }
     }
 
     private void GenerarPlataforma()
     {
-        Transform plataformaEscogida = listaPlataformas[Random.Range(0, listaPlataformas.Count)];
+        Transform plataformaEscogida = listaPlataformas[Random.Range(0, listaPlataformas.Count-1)];
         Transform ultimaPosicionFinalPlataforma = GenerarPlataforma(plataformaEscogida, ultimaPosicionFinal);
         ultimaPosicionFinal = ultimaPosicionFinalPlataforma.Find("PosicionFinal").position;
     }
