@@ -8,6 +8,7 @@ TagManager:
   - rocaGigante
   - piso
   - ColliderInicioPuente
+  - panter
   layers:
   - Default
   - TransparentFX
