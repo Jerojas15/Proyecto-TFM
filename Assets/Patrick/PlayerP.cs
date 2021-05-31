@@ -120,36 +120,17 @@ public class PlayerP : MonoBehaviour
 
         Dash();
 
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            this.mapeoSentimiento++;
-            if (this.mapeoSentimiento == 8)
-            {
-                this.mapeoSentimiento = 0;
-            }
-            fuerzaActualPlayer = sistemaSentimientos[mapeoSentimiento][10];
-            CambiarMecanicasSentimientos(mapeoSentimiento);
-        }
+        CambioSentimiento();
 
         lanzarObjeto();
-        /* OCULTAR OBJETOS OSCURIDAD*/
-        if (Input.GetKeyDown(KeyCode.Z) && oscuridad.activeSelf == false)
-
-        {
-            oscuridad.SetActive(true);
-        }
-        else if (Input.GetKeyDown(KeyCode.Z) && oscuridad.activeSelf == true)
-        {
-            oscuridad.SetActive(false);
-        }
 
         /* OCULTAR OBJETOS OSCURIDAD*/
-        if (Input.GetKeyDown(KeyCode.Z) && oscuridadact.activeSelf == false)
+        if (Input.GetButtonDown("CambiarMundo") && oscuridadact.activeSelf == false)
 
         {
             oscuridadact.SetActive(true);
         }
-        else if (Input.GetKeyDown(KeyCode.Z) && oscuridadact.activeSelf == true)
+        else if (Input.GetButtonDown("CambiarMundo") && oscuridadact.activeSelf == true)
         {
             oscuridadact.SetActive(false);
         }
@@ -169,6 +150,29 @@ void FixedUpdate()
         }
     }
 
+    void CambioSentimiento()
+    {
+        if (Input.GetButtonDown("SentimientoSiguiente"))
+        {
+            this.mapeoSentimiento++;
+            if (this.mapeoSentimiento == 8)
+            {
+                this.mapeoSentimiento = 0;
+            }
+            fuerzaActualPlayer = sistemaSentimientos[mapeoSentimiento][10];
+            CambiarMecanicasSentimientos(mapeoSentimiento);
+        }
+        else if(Input.GetButtonDown("SentimientoAnterior"))
+        {
+            this.mapeoSentimiento--;
+            if (this.mapeoSentimiento == -1)
+            {
+                this.mapeoSentimiento = 7;
+            }
+            fuerzaActualPlayer = sistemaSentimientos[mapeoSentimiento][10];
+            CambiarMecanicasSentimientos(mapeoSentimiento);
+        }
+    }
 
     void CambiarMecanicasSentimientos(int mapeoSentimiento)
     {
@@ -221,8 +225,9 @@ void FixedUpdate()
 
     void Correr()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetButton("Correr"))
         {
+            Debug.Log("Corriendo");
             veloCaminar = velocidadMovimientoInicial + veloAdicCorrer;
             rb.gravityScale = gravedadJugador;// modificar la variable dependiendo del sentimiento
         }
@@ -243,12 +248,12 @@ void FixedUpdate()
         {
             saltosExtra = numSaltosExtra;
         }
-        if (Input.GetKeyDown(KeyCode.Space) && saltosExtra > 0)
+        if (Input.GetButtonDown("Salto") && saltosExtra > 0)
         {
             rb.velocity = Vector2.up * (fuerzaSalto + fuerzaAdicSalto);
             saltosExtra--;
         }
-        else if (Input.GetKeyDown(KeyCode.Space) && saltosExtra == 0 && estaEnPiso == true)
+        else if (Input.GetButtonDown("Salto") && saltosExtra == 0 && estaEnPiso == true)
         {
             animator.SetTrigger("doJump");
             rb.velocity = Vector2.up * (fuerzaSalto + fuerzaAdicSalto);
@@ -258,7 +263,7 @@ void FixedUpdate()
 
     void Dash()
     {
-        if(Input.GetKeyDown(KeyCode.G) && permitirDash == true)
+        if(Input.GetButtonDown("Dash") && permitirDash == true)
         {
             if(dashCoroutine != null)
             {
@@ -288,11 +293,11 @@ void FixedUpdate()
 
     void lanzarObjeto()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetButtonDown("Lanzar"))
         {
             timerFuerzaLanzarObjetos = Time.time;
         }
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetButtonUp("Lanzar"))
         {
             float tiempoApretado = Time.time - timerFuerzaLanzarObjetos;
             Instantiate(roca, posLanzamiento.transform.position, posLanzamiento.transform.rotation);

@@ -35,7 +35,7 @@ public class ColorChanger : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Z)) {
+        if (Input.GetButtonDown("CambiarMundo")) {
             setColorFilter();
         }
         float playerDistance = Vector3.Distance(player.transform.position, startPoint.transform.position);

@@ -20,7 +20,7 @@ public class boton : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.E) && collision.CompareTag("Player"))
+        if (Input.GetButtonDown("Interactuar") && collision.CompareTag("Player"))
         {
             Destroy(objeto);
         }
