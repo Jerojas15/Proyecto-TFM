@@ -10,16 +10,23 @@ public class GeneradorPlataformas : MonoBehaviour
     [SerializeField] private PlayerP player;
     [SerializeField] private int numPlataformasFinal;
 
+    static public bool existeEnemigoPuente;
+
     private Vector3 ultimaPosicionFinal;
     private int numActualPlataformas;
     private void Awake()
     {
         ultimaPosicionFinal = inicioNivel.Find("PosicionFinal").position;
         numActualPlataformas = 0;
+        existeEnemigoPuente = true;
     }
 
     private void Update()
     {
+        if(!existeEnemigoPuente)
+        {
+            numActualPlataformas = numPlataformasFinal;
+        }
         if(Vector3.Distance(player.transform.position,ultimaPosicionFinal) < distanciaParaGenerarPlataforma && numActualPlataformas < numPlataformasFinal)
         {
             GenerarPlataforma();

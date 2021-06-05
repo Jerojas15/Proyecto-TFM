@@ -7,6 +7,7 @@ public class RocaP : MonoBehaviour
     static public float speed;
     public float tiempoApretado;
     private Rigidbody2D rb;
+    [SerializeField] private GameObject destruccionRoca;
 
     [SerializeField] private GameObject player;
     private float fuerza_inicial;
@@ -31,11 +32,16 @@ public class RocaP : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Destroy(this.gameObject);
+        if (collision.transform.CompareTag("EnemigoPuente"))
+        {
+            Destroy(this.gameObject);
+            Instantiate(destruccionRoca, this.transform.position, this.transform.rotation);
+        }
     }
 
     public void lanzamiento(float tiempoApretado)
     {
         
     }
+
 }

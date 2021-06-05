@@ -52,6 +52,7 @@ public class PlayerP : MonoBehaviour
     [SerializeField] private float tiempoSentimiento;
     [SerializeField] private float fuerzaLanzarObjetos;
     [SerializeField] private float timerFuerzaLanzarObjetos;
+    static public bool permitirDisparar;
     [SerializeField] private GameObject roca; // para pruebas
     [SerializeField] private Transform posLanzamiento; // posicion para lanzar objeto 
     [SerializeField] private bool atravesarObjetos;
@@ -72,6 +73,8 @@ public class PlayerP : MonoBehaviour
 
         sistemaSentimientos = SentimientosP.SentimientosConfig;
         animator = GetComponent<Animator>();
+
+        permitirDisparar = false;
 
         /*for (int i = 0; i < Sentimientos.SentimientosConfig.Count; i++)
         {
@@ -192,7 +195,7 @@ void FixedUpdate()
         this.fuerzaLanzarObjetos = sistemaSentimientos[mapeoSentimiento][10];
         this.tiempoSentimiento = sistemaSentimientos[mapeoSentimiento][11];
 
-        txtMecanicas.text = "vida " + sistemaSentimientos[mapeoSentimiento][0] + '\n' + "energia " + sistemaSentimientos[mapeoSentimiento][1] + '\n' + "caminar " + sistemaSentimientos[mapeoSentimiento][2] + '\n' + "+ correr " + sistemaSentimientos[mapeoSentimiento][3] + '\n' + "+ dash " + sistemaSentimientos[mapeoSentimiento][4] + '\n' + "fuerza salto " + sistemaSentimientos[mapeoSentimiento][5] + '\n' + "+ salto adicional " + sistemaSentimientos[mapeoSentimiento][6] + '\n' + "+ num saltos " + sistemaSentimientos[mapeoSentimiento][7] + '\n' + "gravedad " + sistemaSentimientos[mapeoSentimiento][8] + '\n' + "interactuar con objetos " + sistemaSentimientos[mapeoSentimiento][9] + '\n' + "fuerza lanzamiento objetos " + sistemaSentimientos[mapeoSentimiento][10] + '\n' + "timer por sentimientos " + sistemaSentimientos[mapeoSentimiento][11] + '\n';
+        //txtMecanicas.text = "vida " + sistemaSentimientos[mapeoSentimiento][0] + '\n' + "energia " + sistemaSentimientos[mapeoSentimiento][1] + '\n' + "caminar " + sistemaSentimientos[mapeoSentimiento][2] + '\n' + "+ correr " + sistemaSentimientos[mapeoSentimiento][3] + '\n' + "+ dash " + sistemaSentimientos[mapeoSentimiento][4] + '\n' + "fuerza salto " + sistemaSentimientos[mapeoSentimiento][5] + '\n' + "+ salto adicional " + sistemaSentimientos[mapeoSentimiento][6] + '\n' + "+ num saltos " + sistemaSentimientos[mapeoSentimiento][7] + '\n' + "gravedad " + sistemaSentimientos[mapeoSentimiento][8] + '\n' + "interactuar con objetos " + sistemaSentimientos[mapeoSentimiento][9] + '\n' + "fuerza lanzamiento objetos " + sistemaSentimientos[mapeoSentimiento][10] + '\n' + "timer por sentimientos " + sistemaSentimientos[mapeoSentimiento][11] + '\n';
         Debug.Log(sistemaSentimientos[mapeoSentimiento][0]); 
         Debug.Log(sistemaSentimientos[mapeoSentimiento][1]);
         Debug.Log(sistemaSentimientos[mapeoSentimiento][2]);
@@ -293,14 +296,17 @@ void FixedUpdate()
 
     void lanzarObjeto()
     {
-        if (Input.GetButtonDown("Lanzar"))
+        if(permitirDisparar)
         {
-            timerFuerzaLanzarObjetos = Time.time;
-        }
-        if (Input.GetButtonUp("Lanzar"))
-        {
-            float tiempoApretado = Time.time - timerFuerzaLanzarObjetos;
-            Instantiate(roca, posLanzamiento.transform.position, posLanzamiento.transform.rotation);
+            if (Input.GetButtonDown("Lanzar"))
+            {
+                timerFuerzaLanzarObjetos = Time.time;
+            }
+            if (Input.GetButtonUp("Lanzar"))
+            {
+                float tiempoApretado = Time.time - timerFuerzaLanzarObjetos;
+                Instantiate(roca, posLanzamiento.transform.position, posLanzamiento.transform.rotation);
+            }
         }
     }
 

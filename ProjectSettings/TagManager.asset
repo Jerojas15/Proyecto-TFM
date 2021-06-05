@@ -9,6 +9,8 @@ TagManager:
   - piso
   - ColliderInicioPuente
   - panter
+  - Roca
+  - EnemigoPuente
   layers:
   - Default
   - TransparentFX
