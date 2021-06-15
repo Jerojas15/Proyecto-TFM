@@ -144,7 +144,7 @@ public class PlayerP : MonoBehaviour
 
 
      
-void FixedUpdate()
+    void FixedUpdate()
     {
         verificarPiso();
         if(isDashing)

@@ -12,6 +12,7 @@ public class FlieEnemy : MonoBehaviour
     [SerializeField] private float topAngle;
     [SerializeField] private float bottomAngle;
     [SerializeField] private GameObject raycastLauncher;
+    [SerializeField] private int strength;
 
     private float startMovingTime = 0;
     private Rotation direction = Rotation.down;
@@ -81,6 +82,9 @@ public class FlieEnemy : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.CompareTag("Player")) {
+            collision.gameObject.GetComponent<PlayerP>().reducirVida(strength);
+        }
         if (actualState == State.attacking) {
             actualState = State.dying;
         }
