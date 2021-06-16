@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerP : MonoBehaviour
 {
+    public UIElements uiElements;
     /*Sentimientos*/
     Dictionary<int, List<float>> sistemaSentimientos = new Dictionary<int, List<float>>();
     static public float fuerzaActualPlayer;
@@ -292,6 +293,12 @@ public class PlayerP : MonoBehaviour
         {
             RotarSprite();
         }
+    }
+
+    public void activarPiedras()
+    {
+        permitirDisparar = true;
+        uiElements.togglePiedras();
     }
 
     void lanzarObjeto()

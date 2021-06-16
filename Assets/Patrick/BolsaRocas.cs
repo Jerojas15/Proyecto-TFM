@@ -20,7 +20,7 @@ public class BolsaRocas : MonoBehaviour
     {
       if(collision.transform.CompareTag("Player"))
         {
-            PlayerP.permitirDisparar = true;
+            collision.gameObject.GetComponent<PlayerP>().activarPiedras();
             Destroy(this.gameObject);
         }
     }
