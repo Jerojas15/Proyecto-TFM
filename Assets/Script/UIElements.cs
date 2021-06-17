@@ -6,10 +6,13 @@ public class UIElements : MonoBehaviour
 {
     public GameObject bolsaPiedras;
     public bool showPiedras;
+    public int activeSent;
+    public GameObject[] sentimientos;
 
     void Start()
     {
         showPiedras = false;
+        activeSent = 1;
     }
 
     // Update is called once per frame
@@ -22,5 +25,12 @@ public class UIElements : MonoBehaviour
     {
         showPiedras = !showPiedras;
         bolsaPiedras.SetActive(showPiedras);
+    }
+
+    public void changeSentimiento(int nuevo)
+    {
+        sentimientos[activeSent].SetActive(false);
+        activeSent = nuevo;
+        sentimientos[activeSent].SetActive(true);
     }
 }

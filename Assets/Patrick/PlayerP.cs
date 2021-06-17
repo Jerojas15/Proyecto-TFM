@@ -180,6 +180,7 @@ public class PlayerP : MonoBehaviour
 
     void CambiarMecanicasSentimientos(int mapeoSentimiento)
     {
+        uiElements.changeSentimiento(mapeoSentimiento);
         this.vida = sistemaSentimientos[mapeoSentimiento][0];
         this.energia = sistemaSentimientos[mapeoSentimiento][1];
         this.velocidadMovimientoInicial = sistemaSentimientos[mapeoSentimiento][2];
