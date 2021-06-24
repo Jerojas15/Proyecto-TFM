@@ -27,7 +27,6 @@ ScriptedImporter:
     isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
-    vTOnly: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -46,9 +45,6 @@ ScriptedImporter:
     textureType: 8
     textureShape: 1
     singleChannelComponent: 0
-    flipbookRows: 0
-    flipbookColumns: 0
-    ignorePngGamma: 0
     filterMode: 1
     aniso: 1
     mipBias: 0
@@ -711,7 +707,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 388
     mosaicPosition: {x: 0, y: 0}
   - name: L_braid
@@ -760,7 +756,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 396
     mosaicPosition: {x: 0, y: 0}
   - name: L_hand
@@ -774,7 +770,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 414
     mosaicPosition: {x: 0, y: 0}
   - name: access
@@ -802,7 +798,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 400
     mosaicPosition: {x: 0, y: 0}
   - name: R_liner
@@ -900,7 +896,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 408
     mosaicPosition: {x: 0, y: 0}
   - name: R_arm_2
