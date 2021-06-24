@@ -27,15 +27,23 @@ public class GuardEnemy : MonoBehaviour
     }
 
     public void OnCollisionEnter2D(Collision2D collision) {
-         if (collision.gameObject.CompareTag("Player")) {
-            collision.gameObject.GetComponent<PlayerP>().reducirVida(strength);
-        }
-    }
 
-    public void OnTriggerEnter2D(Collider2D collision) {
+        Physics2D.IgnoreCollision(collision.gameObject.GetComponentInChildren<Collider2D>(), GetComponent<Collider2D>());
+
         if (collision.gameObject == start || collision.gameObject == end) {
             transform.Rotate(Vector3.down * 180);
             target = 1 - target;
+        } else if (collision.gameObject.CompareTag("Player")) {
+            collision.gameObject.GetComponent<PlayerP>().reducirVida(strength);
+        }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Destroyer"))
+        {
+            Destroy(gameObject);
         }
     }
 }

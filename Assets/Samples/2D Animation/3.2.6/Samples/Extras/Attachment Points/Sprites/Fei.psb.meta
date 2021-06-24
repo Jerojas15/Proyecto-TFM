@@ -7,7 +7,7 @@ ScriptedImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-  script: {instanceID: 0}
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -24,6 +24,7 @@ ScriptedImporter:
     isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
+    vTOnly: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -42,6 +43,9 @@ ScriptedImporter:
     textureType: 8
     textureShape: 1
     singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
     filterMode: 1
     aniso: 1
     mipBias: 0
@@ -98,7 +102,7 @@ ScriptedImporter:
       y: 1220
       width: 145
       height: 1291
-    spriteID: 457b5cf17284667448dace54028b1583
+    spriteID: 5f52183e76f0ada4a8136b85ed207c5d
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -120,7 +124,7 @@ ScriptedImporter:
       y: 4
       width: 1300
       height: 1208
-    spriteID: 9a0f56ed22cb2844c8d6656768365ad8
+    spriteID: 7c9dd5a4c8eebb1428faf302f7e4f9d8
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -142,7 +146,7 @@ ScriptedImporter:
       y: 2566
       width: 412
       height: 481
-    spriteID: daccdf79ae4549c478f254f8d232eb6c
+    spriteID: bca291dc267db7c4580737cda21c1b42
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -164,7 +168,7 @@ ScriptedImporter:
       y: 3605
       width: 236
       height: 302
-    spriteID: 8fc4ee068b09b8045bb89354020c507f
+    spriteID: 48fc0e23a5ab2af489fd2c3c32b6431b
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -186,7 +190,7 @@ ScriptedImporter:
       y: 1960
       width: 361
       height: 598
-    spriteID: 0b10e3a5bfea65a4eaae20f6016019ef
+    spriteID: 6cbc6be1cf702da4590c98dd072acd87
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -208,7 +212,7 @@ ScriptedImporter:
       y: 3606
       width: 223
       height: 402
-    spriteID: 9b404cf066e920247b0511f96b8324d3
+    spriteID: 9866ef815f6669249a8a151443e25830
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -230,7 +234,7 @@ ScriptedImporter:
       y: 1220
       width: 562
       height: 732
-    spriteID: 92521f2b4991daa489b70dd2d3238b4a
+    spriteID: ce96f4d5bc7da6e49b27334c471180d2
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -252,7 +256,7 @@ ScriptedImporter:
       y: 3055
       width: 253
       height: 543
-    spriteID: 3d82c554720c7ee41957e941e110257f
+    spriteID: 8b236b83d7151324ba4b3c4a6269b79e
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -274,7 +278,7 @@ ScriptedImporter:
       y: 1220
       width: 210
       height: 549
-    spriteID: 409f8498fd139e04da8915d7539f1f27
+    spriteID: 4544943f2a070ea4ea10bfcfb45844c6
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -296,7 +300,7 @@ ScriptedImporter:
       y: 3055
       width: 214
       height: 542
-    spriteID: c22051d957029b544b1d579c79378126
+    spriteID: 71e8feca73004a5408f37beaf80e8221
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -330,70 +334,70 @@ ScriptedImporter:
     spriteName: staff
     isGroup: 0
     parentIndex: -1
-    spriteID: 457b5cf17284667448dace54028b1583
+    spriteID: 5f52183e76f0ada4a8136b85ed207c5d
     layerID: 12
     mosaicPosition: {x: 574, y: 1220}
   - name: head
     spriteName: head
     isGroup: 0
     parentIndex: -1
-    spriteID: 9a0f56ed22cb2844c8d6656768365ad8
+    spriteID: 7c9dd5a4c8eebb1428faf302f7e4f9d8
     layerID: 10
     mosaicPosition: {x: 4, y: 4}
   - name: scarf
     spriteName: scarf
     isGroup: 0
     parentIndex: -1
-    spriteID: daccdf79ae4549c478f254f8d232eb6c
+    spriteID: bca291dc267db7c4580737cda21c1b42
     layerID: 7
     mosaicPosition: {x: 4, y: 2566}
   - name: hair
     spriteName: hair
     isGroup: 0
     parentIndex: -1
-    spriteID: 8fc4ee068b09b8045bb89354020c507f
+    spriteID: 48fc0e23a5ab2af489fd2c3c32b6431b
     layerID: 9
     mosaicPosition: {x: 265, y: 3605}
   - name: right_arm
     spriteName: right_arm
     isGroup: 0
     parentIndex: -1
-    spriteID: 0b10e3a5bfea65a4eaae20f6016019ef
+    spriteID: 6cbc6be1cf702da4590c98dd072acd87
     layerID: 18
     mosaicPosition: {x: 4, y: 1960}
   - name: amulet
     spriteName: amulet
     isGroup: 0
     parentIndex: -1
-    spriteID: 9b404cf066e920247b0511f96b8324d3
+    spriteID: 9866ef815f6669249a8a151443e25830
     layerID: 11
     mosaicPosition: {x: 4, y: 3606}
   - name: body
     spriteName: body
     isGroup: 0
     parentIndex: -1
-    spriteID: 92521f2b4991daa489b70dd2d3238b4a
+    spriteID: ce96f4d5bc7da6e49b27334c471180d2
     layerID: 17
     mosaicPosition: {x: 4, y: 1220}
   - name: left_arm
     spriteName: left_arm
     isGroup: 0
     parentIndex: -1
-    spriteID: 3d82c554720c7ee41957e941e110257f
+    spriteID: 8b236b83d7151324ba4b3c4a6269b79e
     layerID: 16
     mosaicPosition: {x: 4, y: 3055}
   - name: right_leg
     spriteName: right_leg
     isGroup: 0
     parentIndex: -1
-    spriteID: 409f8498fd139e04da8915d7539f1f27
+    spriteID: 4544943f2a070ea4ea10bfcfb45844c6
     layerID: 13
     mosaicPosition: {x: 727, y: 1220}
   - name: left_leg
     spriteName: left_leg
     isGroup: 0
     parentIndex: -1
-    spriteID: c22051d957029b544b1d579c79378126
+    spriteID: 71e8feca73004a5408f37beaf80e8221
     layerID: 14
     mosaicPosition: {x: 265, y: 3055}
   characterData:
