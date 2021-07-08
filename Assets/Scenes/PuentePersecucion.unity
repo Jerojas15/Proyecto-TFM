@@ -749,7 +749,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869348734}
   serializedVersion: 6
-  lengthInSec: 1
+  lengthInSec: 5
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -1309,7 +1309,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 6000
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -1574,7 +1574,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 250
+      scalar: 2000
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -5441,7 +5441,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007140872}
   m_LocalRotation: {x: 0, y: 0, z: -0.10166395, w: 0.9948188}
-  m_LocalPosition: {x: -57.77, y: 30.53, z: 0}
+  m_LocalPosition: {x: -63.8, y: -33.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5511,8 +5511,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1899444333}
   posPlayer: {fileID: 464070193}
-  velocidadEnemigo: 8
-  vidaEnemigo: 10
+  velocidadEnemigo: 8.5
+  vidaEnemigo: 35
   perseguir: 0
 --- !u!95 &1007140876
 Animator:
@@ -5547,7 +5547,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 8.63, y: 24.94}
+  m_Size: {x: 11, y: 24.94}
   m_Direction: 0
 --- !u!114 &1007669915 stripped
 MonoBehaviour:
@@ -6459,7 +6459,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782178904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -55.993492, y: -3.7899978, z: -10}
+  m_LocalPosition: {x: -55.300846, y: -3.7899978, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2145266232}
@@ -6734,7 +6734,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8bf2944f52639b54d8e5a51675e658f0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8e4981864279ade4c99333507eaccaa9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -6999,7 +6999,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961995961}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -55.993492, y: -3.7899978, z: -10}
+  m_LocalPosition: {x: -55.300846, y: -3.7899978, z: -10}
   m_LocalScale: {x: 0.99691594, y: 0.99691594, z: 0.99691594}
   m_Children:
   - {fileID: 1406683908}

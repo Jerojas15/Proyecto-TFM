@@ -198,7 +198,7 @@ public class PlayerP : MonoBehaviour
         this.tiempoSentimiento = sistemaSentimientos[mapeoSentimiento][11];
 
         //txtMecanicas.text = "vida " + sistemaSentimientos[mapeoSentimiento][0] + '\n' + "energia " + sistemaSentimientos[mapeoSentimiento][1] + '\n' + "caminar " + sistemaSentimientos[mapeoSentimiento][2] + '\n' + "+ correr " + sistemaSentimientos[mapeoSentimiento][3] + '\n' + "+ dash " + sistemaSentimientos[mapeoSentimiento][4] + '\n' + "fuerza salto " + sistemaSentimientos[mapeoSentimiento][5] + '\n' + "+ salto adicional " + sistemaSentimientos[mapeoSentimiento][6] + '\n' + "+ num saltos " + sistemaSentimientos[mapeoSentimiento][7] + '\n' + "gravedad " + sistemaSentimientos[mapeoSentimiento][8] + '\n' + "interactuar con objetos " + sistemaSentimientos[mapeoSentimiento][9] + '\n' + "fuerza lanzamiento objetos " + sistemaSentimientos[mapeoSentimiento][10] + '\n' + "timer por sentimientos " + sistemaSentimientos[mapeoSentimiento][11] + '\n';
-        Debug.Log(sistemaSentimientos[mapeoSentimiento][0]); 
+        /*Debug.Log(sistemaSentimientos[mapeoSentimiento][0]); 
         Debug.Log(sistemaSentimientos[mapeoSentimiento][1]);
         Debug.Log(sistemaSentimientos[mapeoSentimiento][2]);
         Debug.Log(sistemaSentimientos[mapeoSentimiento][3]);
@@ -209,7 +209,7 @@ public class PlayerP : MonoBehaviour
         Debug.Log(sistemaSentimientos[mapeoSentimiento][8]);
         Debug.Log(sistemaSentimientos[mapeoSentimiento][9]);
         Debug.Log(sistemaSentimientos[mapeoSentimiento][10]);
-        Debug.Log(sistemaSentimientos[mapeoSentimiento][11]);
+        Debug.Log(sistemaSentimientos[mapeoSentimiento][11]);*/
     }
 
     void RotarSprite()
@@ -232,7 +232,7 @@ public class PlayerP : MonoBehaviour
     {
         if (Input.GetButton("Correr"))
         {
-            Debug.Log("Corriendo");
+            //Debug.Log("Corriendo");
             veloCaminar = velocidadMovimientoInicial + veloAdicCorrer;
             rb.gravityScale = gravedadJugador;// modificar la variable dependiendo del sentimiento
         }
@@ -346,5 +346,10 @@ public class PlayerP : MonoBehaviour
         rb.velocity = new Vector2(velocidadMovimientoInicial,0);
         yield return new WaitForSeconds(dashTiempoCalma);
         permitirDash = true;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.transform.name);
     }
 }

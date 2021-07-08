@@ -37,7 +37,7 @@ public class Enemigo_NivelPuente : MonoBehaviour
         }
         if (collision.transform.CompareTag("Roca"))
         {
-            Debug.Log("gople");
+            //Debug.Log("gople");
             vidaEnemigo--;
         }
     }

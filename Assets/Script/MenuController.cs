@@ -11,6 +11,9 @@ public class MenuController : MonoBehaviour
     public GameObject controls;
     public GameObject back;
     public GameObject controller;
+    [SerializeField] private GameObject letreroEmpezar;
+    [SerializeField] private GameObject letreroControles;
+    [SerializeField] private GameObject letreroSalir;
 
     public void Play()
     {
@@ -29,6 +32,9 @@ public class MenuController : MonoBehaviour
         exit.SetActive(false);
         controls.SetActive(false);
         back.SetActive(true);
+        letreroControles.SetActive(false);
+        letreroEmpezar.SetActive(false);
+        letreroSalir.SetActive(false);
     }
 
     public void Back()
@@ -38,5 +44,8 @@ public class MenuController : MonoBehaviour
         exit.SetActive(true);
         controls.SetActive(true);
         back.SetActive(false);
+        letreroControles.SetActive(true);
+        letreroEmpezar.SetActive(true);
+        letreroSalir.SetActive(true);
     }
 }
