@@ -28,9 +28,7 @@ public class ColorChanger : MonoBehaviour {
         if (colorGrading && isActive) {
             colorGrading.enabled.value = true;
             colorGrading.colorFilter.value = new Color(0.584f, 0.559f, 1.774f, 1);
-            colorGrading.lift.value = new Vector4(0, 0, 1, 0);
             colorGrading.gamma.value = new Vector4(0, 0, 1, 0);
-            colorGrading.gain.value = new Vector4(0, 0, 1, 0);
         }
     }
 
@@ -47,9 +45,7 @@ public class ColorChanger : MonoBehaviour {
                 colorGrading.enabled.value = true;
                 colorGrading.colorFilter.value = new Color(1, 1, 1, 1);
                 if (playerDistance <= fullRadius) {
-                    colorGrading.lift.value = new Vector4(1, 0, 0, 0);
                     colorGrading.gamma.value = new Vector4(1, 0, 0, 0);
-                    colorGrading.gain.value = new Vector4(1, 0, 0, 0);
                 } else {
                     float percentage = 1 - (playerDistance / pointsDistance);
                     colorGrading.lift.value = new Vector4(1 * percentage, 0, 0, 0);

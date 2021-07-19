@@ -23,11 +23,11 @@ public class GuardEnemy : MonoBehaviour
         if (target == 1) {
             actualTarget = end.transform;
         }
+        Vector2 targetPos = new Vector2(actualTarget.localPosition.x, transform.localPosition.y);
         transform.localPosition = Vector2.MoveTowards(transform.localPosition, actualTarget.localPosition, speed * Time.deltaTime);
     }
 
     public void OnCollisionEnter2D(Collision2D collision) {
-
         Physics2D.IgnoreCollision(collision.gameObject.GetComponentInChildren<Collider2D>(), GetComponent<Collider2D>());
 
         if (collision.gameObject == start || collision.gameObject == end) {
