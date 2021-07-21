@@ -47,12 +47,16 @@ public class PlayerP : MonoBehaviour
     [SerializeField] private Transform chequearPiso;
     private bool estaEnPiso;
     private float saltosExtra;
+    private float contadorTiempoSalto;
+    [SerializeField] private float tiempoSalto;
 
     /*Extras*/
     [Header("Extras")]
     [SerializeField] private float tiempoSentimiento;
     [SerializeField] private float fuerzaLanzarObjetos;
     [SerializeField] private float timerFuerzaLanzarObjetos;
+    [SerializeField] private float timerFinalLanzarObjetos = 0.5f;
+    private float timerInicialLanzarObjetos = 0f;
     static public bool permitirDisparar;
     [SerializeField] private GameObject roca; // para pruebas
     [SerializeField] private Transform posLanzamiento; // posicion para lanzar objeto 
@@ -95,10 +99,14 @@ public class PlayerP : MonoBehaviour
 
         //duracionDash = inicioTiempoDash;
 
-        //rocaRB = roca.GetComponent<Rigidbody2D>();
-        fuerzaActualPlayer = 1;
+        //rocaRB = roca.GetComponent<Rigidbody2D>();        
         mapeoSentimiento = 1;
+        fuerzaActualPlayer = sistemaSentimientos[mapeoSentimiento][10];
         CambiarMecanicasSentimientos(mapeoSentimiento);
+
+        Physics2D.IgnoreLayerCollision(9, 11);  // Ignora colisión entre Player y Rocas
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
@@ -159,7 +167,7 @@ public class PlayerP : MonoBehaviour
         if (Input.GetButtonDown("SentimientoSiguiente"))
         {
             this.mapeoSentimiento++;
-            if (this.mapeoSentimiento == 8)
+            if (this.mapeoSentimiento == 2)   // cambio temporal de 8 a 2 sentimientos
             {
                 this.mapeoSentimiento = 0;
             }
@@ -171,7 +179,7 @@ public class PlayerP : MonoBehaviour
             this.mapeoSentimiento--;
             if (this.mapeoSentimiento == -1)
             {
-                this.mapeoSentimiento = 7;
+                this.mapeoSentimiento = 1;   // cambio temporal de 7 a 1 sentimientos
             }
             fuerzaActualPlayer = sistemaSentimientos[mapeoSentimiento][10];
             CambiarMecanicasSentimientos(mapeoSentimiento);
@@ -247,14 +255,14 @@ public class PlayerP : MonoBehaviour
 
     void Salto()
     {
-        
-
         if (estaEnPiso == true)
         {
             saltosExtra = numSaltosExtra;
         }
         if (Input.GetButtonDown("Salto") && saltosExtra > 0)
         {
+            // estaEnPiso = false; //
+            // contadorTiempoSalto = tiempoSalto; //
             rb.velocity = Vector2.up * (fuerzaSalto + fuerzaAdicSalto);
             saltosExtra--;
         }
@@ -262,8 +270,23 @@ public class PlayerP : MonoBehaviour
         {
             animator.SetTrigger("doJump");
             rb.velocity = Vector2.up * (fuerzaSalto + fuerzaAdicSalto);
-
         }
+        /*if (Input.GetButton("Salto") && estaEnPiso == false)
+        {
+            if (contadorTiempoSalto > 0)
+            {
+                rb.velocity = Vector2.up * (fuerzaSalto + fuerzaAdicSalto);
+                contadorTiempoSalto -= Time.deltaTime;
+            }
+            else
+            {
+                estaEnPiso = true;
+            }
+        }
+        if (Input.GetButtonUp("Salto"))
+        {
+            estaEnPiso = true;
+        }*/
     }
 
     void Dash()
@@ -287,7 +310,6 @@ public class PlayerP : MonoBehaviour
 
         if (mirarDerecha == false && inputMovimiento > 0)
         {
-
             RotarSprite();
         }
         else if (mirarDerecha == true && inputMovimiento < 0)
@@ -306,13 +328,18 @@ public class PlayerP : MonoBehaviour
     {
         if(permitirDisparar)
         {
-            if (Input.GetButtonDown("Lanzar"))
+            /*if (Input.GetButtonDown("Lanzar"))
             {
                 timerFuerzaLanzarObjetos = Time.time;
             }
             if (Input.GetButtonUp("Lanzar"))
             {
                 float tiempoApretado = Time.time - timerFuerzaLanzarObjetos;
+                Instantiate(roca, posLanzamiento.transform.position, posLanzamiento.transform.rotation);
+            }*/
+            if(Input.GetButtonDown("Lanzar") && Time.time > timerInicialLanzarObjetos)
+            {
+                timerInicialLanzarObjetos = Time.time + timerFinalLanzarObjetos;
                 Instantiate(roca, posLanzamiento.transform.position, posLanzamiento.transform.rotation);
             }
         }
@@ -348,8 +375,12 @@ public class PlayerP : MonoBehaviour
         permitirDash = true;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    /*private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.transform.name);
-    }
+        if(collision.gameObject.CompareTag("Roca"))
+        {
+            Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
+        }
+        //Debug.Log(collision.transform.name);
+    }*/
 }

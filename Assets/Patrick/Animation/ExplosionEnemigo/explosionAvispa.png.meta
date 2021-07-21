@@ -1,0 +1,1046 @@
+fileFormatVersion: 2
+guid: f83e16548bfab954ead90e9d2ca98cd3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8825404655602647470
+    second: explosionAvispa_0
+  - first:
+      213: 5929342323328170110
+    second: explosionAvispa_1
+  - first:
+      213: -1117087920882815965
+    second: explosionAvispa_2
+  - first:
+      213: -4769509365379704271
+    second: explosionAvispa_3
+  - first:
+      213: -6009243466570371429
+    second: explosionAvispa_4
+  - first:
+      213: 5880023833449968120
+    second: explosionAvispa_5
+  - first:
+      213: 3229252788582129597
+    second: explosionAvispa_6
+  - first:
+      213: -8002568833177595050
+    second: explosionAvispa_7
+  - first:
+      213: -9062384439534956057
+    second: explosionAvispa_8
+  - first:
+      213: -1469438384882238196
+    second: explosionAvispa_9
+  - first:
+      213: -5173076376159028340
+    second: explosionAvispa_10
+  - first:
+      213: 5186976202336350823
+    second: explosionAvispa_11
+  - first:
+      213: 5088667259971102731
+    second: explosionAvispa_12
+  - first:
+      213: 131070557247806716
+    second: explosionAvispa_13
+  - first:
+      213: -3586777635189926405
+    second: explosionAvispa_14
+  - first:
+      213: 1333017343670369300
+    second: explosionAvispa_15
+  - first:
+      213: 8402600570457573479
+    second: explosionAvispa_16
+  - first:
+      213: 3037355275264193410
+    second: explosionAvispa_17
+  - first:
+      213: -3500577764351832675
+    second: explosionAvispa_18
+  - first:
+      213: 5889676546224941503
+    second: explosionAvispa_19
+  - first:
+      213: 4251529935517919635
+    second: explosionAvispa_20
+  - first:
+      213: 99617460579787639
+    second: explosionAvispa_21
+  - first:
+      213: -5316470272360250238
+    second: explosionAvispa_22
+  - first:
+      213: -7497841905583551768
+    second: explosionAvispa_23
+  - first:
+      213: -5661306113837311737
+    second: explosionAvispa_24
+  - first:
+      213: -388955249590137161
+    second: explosionAvispa_25
+  - first:
+      213: -462543983079523044
+    second: explosionAvispa_26
+  - first:
+      213: -7418873886940519262
+    second: explosionAvispa_27
+  - first:
+      213: -7076135906462090595
+    second: explosionAvispa_28
+  - first:
+      213: -6104622669509434289
+    second: explosionAvispa_29
+  - first:
+      213: -1941653867133314992
+    second: explosionAvispa_30
+  - first:
+      213: -8956083973102132086
+    second: explosionAvispa_31
+  - first:
+      213: 6589709300924855533
+    second: explosionAvispa_32
+  - first:
+      213: 6988325080432346260
+    second: explosionAvispa_33
+  - first:
+      213: 3483567169478499731
+    second: explosionAvispa_34
+  - first:
+      213: -6752197971323094964
+    second: explosionAvispa_35
+  - first:
+      213: 7583799184378320394
+    second: explosionAvispa_36
+  - first:
+      213: -8385469472356908553
+    second: explosionAvispa_37
+  - first:
+      213: -5530298450707771458
+    second: explosionAvispa_38
+  - first:
+      213: 3461305993396245929
+    second: explosionAvispa_39
+  - first:
+      213: -3657169996783185746
+    second: explosionAvispa_40
+  - first:
+      213: -8910451539548462999
+    second: explosionAvispa_41
+  - first:
+      213: 5808894920783904967
+    second: explosionAvispa_42
+  - first:
+      213: -1319674130163606667
+    second: explosionAvispa_43
+  - first:
+      213: -669037216364820032
+    second: explosionAvispa_44
+  - first:
+      213: 6228301809178281974
+    second: explosionAvispa_45
+  - first:
+      213: 1518333067731632612
+    second: explosionAvispa_46
+  - first:
+      213: 3813989342902024941
+    second: explosionAvispa_47
+  - first:
+      213: -2714536614748590744
+    second: explosionAvispa_48
+  - first:
+      213: -5574965897438617818
+    second: explosionAvispa_49
+  - first:
+      213: 6067128752279270158
+    second: explosionAvispa_50
+  - first:
+      213: 6832157155219181029
+    second: explosionAvispa_51
+  - first:
+      213: 8220584503056643529
+    second: explosionAvispa_52
+  - first:
+      213: 6405163294225976265
+    second: explosionAvispa_53
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: explosionAvispa_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1464876c22a7a70800000000000000
+      internalID: 8825404655602647470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 480
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e783aa59d61494250800000000000000
+      internalID: 5929342323328170110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 480
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32c66ec547e4f70f0800000000000000
+      internalID: -1117087920882815965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 480
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ad4ab808c4fcdb0800000000000000
+      internalID: -4769509365379704271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 480
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e6c3ec7e0ea9ca0800000000000000
+      internalID: -6009243466570371429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 480
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1bd97d58a0a9150800000000000000
+      internalID: 5880023833449968120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf90694d4c90dc20800000000000000
+      internalID: 3229252788582129597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_7
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 384
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65356dfab0a21f090800000000000000
+      internalID: -8002568833177595050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_8
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 384
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e1dd77ed51fb3280800000000000000
+      internalID: -9062384439534956057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_9
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 384
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d35c903918b9be0800000000000000
+      internalID: -1469438384882238196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_10
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 384
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b731ba17a8538b0800000000000000
+      internalID: -5173076376159028340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_11
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 384
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762b9aecf57dbf740800000000000000
+      internalID: 5186976202336350823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08ecba79e39e9640800000000000000
+      internalID: 5088667259971102731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_13
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 288
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc94453af7a1d100800000000000000
+      internalID: 131070557247806716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_14
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 288
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf5503e8eb4393ec0800000000000000
+      internalID: -3586777635189926405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_15
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 288
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41c38e02634df7210800000000000000
+      internalID: 1333017343670369300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_16
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 288
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7684e9f23b80c9470800000000000000
+      internalID: 8402600570457573479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_17
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 288
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 283f7ceb78ad62a20800000000000000
+      internalID: 3037355275264193410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d8d27f1137b6fc0800000000000000
+      internalID: -3500577764351832675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_19
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 192
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb9efab2d955cb150800000000000000
+      internalID: 5889676546224941503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_20
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 192
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3992c7663f7700b30800000000000000
+      internalID: 4251529935517919635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_21
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 192
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773e8477d89e16100800000000000000
+      internalID: 99617460579787639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_22
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 192
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2840b05847a1836b0800000000000000
+      internalID: -5316470272360250238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_23
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 192
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea87ab138052f790800000000000000
+      internalID: -7497841905583551768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709daf795100f61b0800000000000000
+      internalID: -5661306113837311737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_25
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 96
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be08a2e2472a9af0800000000000000
+      internalID: -388955249590137161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_26
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 96
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1dfc83b2b6b499f0800000000000000
+      internalID: -462543983079523044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_27
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 96
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a42d77b18dda0990800000000000000
+      internalID: -7418873886940519262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_28
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 96
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ab0f052e38ccd90800000000000000
+      internalID: -7076135906462090595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_29
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 96
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44e7189606084ba0800000000000000
+      internalID: -6104622669509434289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05851cc581cdd05e0800000000000000
+      internalID: -1941653867133314992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_31
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a84adace31995b380800000000000000
+      internalID: -8956083973102132086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_32
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de4b6b602b9537b50800000000000000
+      internalID: 6589709300924855533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_33
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 100.166664
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4948f1a82a48bf060800000000000000
+      internalID: 6988325080432346260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_35
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 31
+        width: 101
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c487c2248bf5b42a0800000000000000
+      internalID: -6752197971323094964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosionAvispa_36
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 95
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0654c07d211f3960800000000000000
+      internalID: 7583799184378320394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

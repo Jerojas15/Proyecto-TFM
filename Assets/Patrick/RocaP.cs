@@ -39,9 +39,9 @@ public class RocaP : MonoBehaviour
         }
     }
 
-    public void lanzamiento(float tiempoApretado)
+    /*public void lanzamiento(float tiempoApretado)
     {
         
-    }
+    }*/
 
 }

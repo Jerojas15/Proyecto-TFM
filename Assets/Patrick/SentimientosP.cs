@@ -6,8 +6,8 @@ public class SentimientosP : MonoBehaviour
 {
     // MAPEO ESTADO:
     private int mundo_oscuridad = 0; // 0: Mundo Oscuridad
-    private int estado_normal = 1; // 1: Normal
-    private int estado_odio = 2; // 2: Odio
+    private int estado_normal = 0; // 1: Normal   // antes 1 ahora 0
+    private int estado_odio = 1; // 2: Odio       // antes 2 ahora 1
     private int estado_tristeza = 3; // 3: Tristeza
     private int estado_envidia = 4; // 4: Envidia
     private int estado_culpa = 5; // 5: Culpa
@@ -30,7 +30,7 @@ public class SentimientosP : MonoBehaviour
 
     static public Dictionary<int, List<float>> SentimientosConfig = new Dictionary<int, List<float>>();
     static public List<float> mundoOscuridad = new List<float>{      100, 50,  4, 2,    0.0075f, 6, 2,     0, 0.5f,  1, 0.5f, 25 }; 
-    static public List<float> estadoNormal = new List<float>{        100, 100, 6, 2,    0.005f,  8, 1.5f,  0, 1,     0, 1,    -1 }; //-1 para infinito
+    static public List<float> estadoNormal = new List<float>{        100, 100, 6, 2,    0.005f,  10, 1.5f,  0, 2f,     0, 1,    -1 }; //-1 para infinito
     static public List<float> estadoOdio = new List<float> {         100, 50,  6, 3,    0.0025f, 7, 1,     1, 2,     0, 2,    20 };
     static public List<float> estadoTristeza = new List<float>{      100, 50,  4, 1.5f, 0.008f,  5, 0.75f, 1, 0.5f,  0, 0.5f, 20 };
     static public List<float> estadoEnvidia = new List<float>{       100, 50,  5, 1.5f, 0.0075f, 6, 0.75f, 2, 1.5f,  0, 2,    20 };
@@ -41,14 +41,14 @@ public class SentimientosP : MonoBehaviour
 
     void Awake()
     {
-        SentimientosConfig.Add(mundo_oscuridad, mundoOscuridad);
+        //SentimientosConfig.Add(mundo_oscuridad, mundoOscuridad);
         SentimientosConfig.Add(estado_normal, estadoNormal);
         SentimientosConfig.Add(estado_odio, estadoOdio);
-        SentimientosConfig.Add(estado_tristeza, estadoTristeza);
+        /* SentimientosConfig.Add(estado_tristeza, estadoTristeza);
         SentimientosConfig.Add(estado_envidia, estadoEnvidia);
         SentimientosConfig.Add(estado_culpa, estadoCulpa);
         SentimientosConfig.Add(estado_rabia, estadoRabia);
-        SentimientosConfig.Add(estado_desesperacion, estadoDesesperacion);
+        SentimientosConfig.Add(estado_desesperacion, estadoDesesperacion);*/
     }
 
 }

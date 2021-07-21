@@ -8,6 +8,8 @@ public class Enemigo_NivelPuente : MonoBehaviour
     [SerializeField] private float velocidadEnemigo;
     [SerializeField] private int vidaEnemigo;
 
+    [SerializeField] private GameObject explosionEnemigo;
+
     public bool perseguir = false;
     void Start()
     {
@@ -24,6 +26,7 @@ public class Enemigo_NivelPuente : MonoBehaviour
         if(vidaEnemigo <= 0)
         {
             Destroy(this.gameObject);
+            Instantiate(explosionEnemigo, this.transform.position, this.transform.rotation);
             GeneradorPlataformas.existeEnemigoPuente = false;
         }
     }
