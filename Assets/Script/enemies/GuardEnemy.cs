@@ -9,11 +9,16 @@ public class GuardEnemy : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private int strength;
     private int target;
-
+    public FoxGuardian vida;
+    
     // Start is called before the first frame update
     void Start()
     {
         target = 0;
+
+        vida = FindObjectOfType<FoxGuardian>();
+
+        
     }
 
     // Update is called once per frame

@@ -86,4 +86,12 @@ public class FoxGuardian : MonoBehaviour
         }
         //disparando panteras y abjeas en el tiempo 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Chuzo"))
+        {
+
+        }
+    }
 }

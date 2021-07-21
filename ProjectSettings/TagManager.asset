@@ -12,6 +12,7 @@ TagManager:
   - Roca
   - EnemigoPuente
   - Destroyer
+  - Chuzo
   layers:
   - Default
   - TransparentFX
