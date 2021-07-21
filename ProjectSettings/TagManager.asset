@@ -13,6 +13,8 @@ TagManager:
   - EnemigoPuente
   - Destroyer
   - Chuzo
+  - Inicio
+  - Fin
   layers:
   - Default
   - TransparentFX

@@ -83,26 +83,36 @@ public class FoxGuardian : MonoBehaviour
             ShootObjects();
             timer = 5f;
         }
-        else
+        else if (vida==1)
         {
+            gameObject.GetComponent<SpriteRenderer>().sprite = SpriteFinal;
             FaseFinal = true;
            
         }  
         //disparando panteras y abjeas en el tiempo 
 
-        if (FaseFinal)
+        if (FaseFinal == true)
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = SpriteFinal;
-            gameObject.transform.position = iniciozona.transform.position;
-            try
+
+            if (ffCount == 3)
+            {  
+                target = vacio.transform;
+            }
+
+            if (gameObject.transform.position.x == finzona.transform.position.x)
             {
+                transform.Rotate(Vector3.down * 180);
+                target = iniciozona.transform;
+            }
+            else if (gameObject.transform.position.x == iniciozona.transform.position.x)
+            {
+                ffCount += 1;
+                transform.Rotate(Vector3.down * 180);
+                target = finzona.transform;
+            }
+
                 transform.localPosition = Vector2.MoveTowards(transform.localPosition, target.localPosition, speed * Time.deltaTime);
-            }
-            catch (System.Exception)
-            {
-                Debug.Log("Guardiana stuneada");
-            }
-            
+           
         }
 
     }
@@ -113,24 +123,8 @@ public class FoxGuardian : MonoBehaviour
         if (collision.CompareTag("Chuzo"))
         {
             vida -= 1;
+            Destroy(collision.gameObject,5);
         }
         //Sistema de resta de vida
-
-        //Movimiento del personaje en fase final
-        if (collision.CompareTag ("Fin"))
-        {
-            target = iniciozona.transform;
-        }
-        else if (collision.CompareTag("Inicio"))
-        {
-            ffCount += 1;
-            target = finzona.transform;
-        }
-
-        if (ffCount == 3)
-        {            
-                target = vacio.transform;                  
-        }
-        //Movimiento del personaje en fase final
     }
 }
