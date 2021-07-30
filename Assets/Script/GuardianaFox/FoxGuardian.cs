@@ -61,7 +61,7 @@ public class FoxGuardian : MonoBehaviour
                 rand = gameObject.transform.position.x;
             }
 
-            //Instantiate(Animal(vida), (new Vector3(rand, gameObject.transform.position.y, gameObject.transform.position.z)), Quaternion.identity);
+            Instantiate(Animal(vida), (new Vector3(rand, gameObject.transform.position.y, gameObject.transform.position.z)), Quaternion.identity);
 
 
         }
