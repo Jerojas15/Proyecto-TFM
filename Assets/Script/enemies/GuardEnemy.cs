@@ -9,14 +9,11 @@ public class GuardEnemy : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private int strength;
     private int target;
-    public FoxGuardian vida;
     
     // Start is called before the first frame update
     void Start()
     {
         target = 0;
-
-        vida = FindObjectOfType<FoxGuardian>();
 
         
     }
@@ -33,7 +30,12 @@ public class GuardEnemy : MonoBehaviour
     }
 
     public void OnCollisionEnter2D(Collision2D collision) {
-        Physics2D.IgnoreCollision(collision.gameObject.GetComponentInChildren<Collider2D>(), GetComponent<Collider2D>());
+
+        if (!collision.gameObject.CompareTag("piso"))
+        {
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponentInChildren<Collider2D>(), GetComponent<Collider2D>());
+        }
+       
 
         if (collision.gameObject == start || collision.gameObject == end) {
             transform.Rotate(Vector3.down * 180);

@@ -15,6 +15,8 @@ TagManager:
   - Chuzo
   - Inicio
   - Fin
+  - Fin
+  - Inicio
   layers:
   - Default
   - TransparentFX
