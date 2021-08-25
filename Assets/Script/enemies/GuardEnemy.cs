@@ -9,12 +9,13 @@ public class GuardEnemy : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private int strength;
     private int target;
-    
+
+   
     // Start is called before the first frame update
     void Start()
     {
         target = 0;
-
+     
         
     }
 
@@ -27,6 +28,7 @@ public class GuardEnemy : MonoBehaviour
         }
         Vector2 targetPos = new Vector2(actualTarget.localPosition.x, transform.localPosition.y);
         transform.localPosition = Vector2.MoveTowards(transform.localPosition, actualTarget.localPosition, speed * Time.deltaTime);
+        gameObject.GetComponent<Animation>().Play();
     }
 
     public void OnCollisionEnter2D(Collision2D collision) {
@@ -40,14 +42,18 @@ public class GuardEnemy : MonoBehaviour
         if (collision.gameObject == start || collision.gameObject == end) {
             transform.Rotate(Vector3.down * 180);
             target = 1 - target;
-        } else if (collision.gameObject.CompareTag("Player")) {
-            collision.gameObject.GetComponent<PlayerP>().reducirVida(strength);
-        }
+        }  
+       
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerP>().reducirVida(strength);
+        }
         if (collision.gameObject.CompareTag("Destroyer"))
         {
             Destroy(gameObject);

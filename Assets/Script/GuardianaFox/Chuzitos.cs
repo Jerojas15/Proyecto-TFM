@@ -8,7 +8,7 @@ public class Chuzitos : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("piso") || collision.gameObject.CompareTag("Player"))
         {
-            Physics2D.IgnoreCollision(collision.gameObject.GetComponentInChildren<Collider2D>(), GetComponent<Collider2D>());
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         }
        
     }

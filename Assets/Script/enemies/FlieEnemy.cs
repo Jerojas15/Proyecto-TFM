@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class FlieEnemy : MonoBehaviour
 {
@@ -79,6 +80,8 @@ public class FlieEnemy : MonoBehaviour
     private void die() {
         GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        Destroy(gameObject,2);
+
     }
 
     void OnCollisionEnter2D(Collision2D collision) {

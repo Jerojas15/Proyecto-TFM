@@ -14,5 +14,9 @@ public class trampolin : MonoBehaviour
         {
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = (Vector2.up * jumpforce);
         }
+        else
+        {
+            Physics2D.IgnoreCollision(collision.collider,gameObject.GetComponent<Collider2D>());
+        }
     }
 }
