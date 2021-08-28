@@ -107,6 +107,11 @@ public class PlayerP : MonoBehaviour
         Physics2D.IgnoreLayerCollision(9, 11);  // Ignora colisión entre Player y Rocas
 
         Cursor.lockState = CursorLockMode.Locked;
+
+        if (PlayerPrefs.HasKey("Life")) {
+            vida = PlayerPrefs.GetFloat("Life");
+            transform.position = new Vector3(PlayerPrefs.GetFloat("Position_X"), PlayerPrefs.GetFloat("Position_Y"), transform.position.z);
+        }
     }
 
     void Update()
@@ -384,4 +389,8 @@ public class PlayerP : MonoBehaviour
         }
         //Debug.Log(collision.transform.name);
     }*/
+
+    public float GetVida() {
+        return this.vida;
+    }
 }
