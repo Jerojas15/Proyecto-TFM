@@ -215,7 +215,7 @@ public class MenuPause : MonoBehaviour
         canvasPausa.SetActive(true);
         indexPausa = 0;
         Time.timeScale = 0f;
-        Vector3 nuevaPos = new Vector3(camara.transform.position.x + 3.47f, camara.transform.position.y + 6.08f, camara.transform.position.z + 10f);
+        Vector3 nuevaPos = new Vector3(camara.transform.position.x + 3.47f, camara.transform.position.y + 16.08f, camara.transform.position.z + 10f);
         hojasDestroy = Instantiate(hojas, nuevaPos, camara.transform.rotation);
         hojasSecasDestroy = Instantiate(hojasSecas, nuevaPos, camara.transform.rotation);
     }
