@@ -1,8 +1,12 @@
 ﻿using UnityEngine;
-using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class ColorChanger : MonoBehaviour {
-    ColorGrading colorGrading;
+
+    [SerializeField]
+    private Volume volume;
+    
     private bool isActive = false;
 
     [SerializeField]
@@ -17,43 +21,38 @@ public class ColorChanger : MonoBehaviour {
     [SerializeField]
     private GameObject player;
 
+    private ColorAdjustments color;
     void Start() {
-        GetComponent<PostProcessVolume>().profile.TryGetSettings(out colorGrading);
+        volume.profile.TryGet<ColorAdjustments>(out color);
     }
 
     public void setColorFilter() {
         isActive = !isActive;
-        colorGrading.active = isActive;
 
-        if (colorGrading && isActive) {
-            colorGrading.enabled.value = true;
-            colorGrading.colorFilter.value = new Color(0.584f, 0.559f, 1.774f, 1);
-            colorGrading.gamma.value = new Vector4(0, 0, 1, 0);
+        if (volume && isActive) {
+            color.colorFilter.value = new Color(0.584f, 0.559f, 1.774f, 1);
+        } else {
+            color.colorFilter.value = new Color(1, 1, 1, 0);
         }
     }
 
     void Update() {
+        float playerDistance = Vector3.Distance(player.transform.position, startPoint.transform.position);
+        float pointsDistance = Vector3.Distance(farestPoint.transform.position, startPoint.transform.position);
         if (Input.GetButtonDown("CambiarMundo")) {
             setColorFilter();
         }
-        float playerDistance = Vector3.Distance(player.transform.position, startPoint.transform.position);
-        float pointsDistance = Vector3.Distance(farestPoint.transform.position, startPoint.transform.position);
-
+        
         if (!isActive) {
             if (playerDistance < pointsDistance) {
-                colorGrading.active = true;
-                colorGrading.enabled.value = true;
-                colorGrading.colorFilter.value = new Color(1, 1, 1, 1);
                 if (playerDistance <= fullRadius) {
-                    colorGrading.gamma.value = new Vector4(1, 0, 0, 0);
+                    color.colorFilter.value = new Color(1, 0.3f, 0.3f, 0);
                 } else {
                     float percentage = 1 - (playerDistance / pointsDistance);
-                    colorGrading.lift.value = new Vector4(1 * percentage, 0, 0, 0);
-                    colorGrading.gamma.value = new Vector4(1 * percentage, 0, 0, 0);
-                    colorGrading.gain.value = new Vector4(1 * percentage, 0, 0, 0);
+                    color.colorFilter.value = new Color(1, 1 - percentage, 1 - percentage, 0);
                 }
             } else {
-                colorGrading.active = false;
+                color.colorFilter.value = new Color(1, 1, 1, 0);
             }
         }
     }

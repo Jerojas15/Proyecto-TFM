@@ -37,22 +37,16 @@ public class GuardEnemy : MonoBehaviour
         {
             Physics2D.IgnoreCollision(collision.gameObject.GetComponentInChildren<Collider2D>(), GetComponent<Collider2D>());
         }
-       
-
-        if (collision.gameObject == start || collision.gameObject == end) {
-            transform.Rotate(Vector3.down * 180);
-            target = 1 - target;
-        }  
-       
-
+        if (collision.gameObject.CompareTag("Player")) {
+            collision.gameObject.GetComponent<PlayerP>().reducirVida(strength);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            collision.gameObject.GetComponent<PlayerP>().reducirVida(strength);
+        if (collision.gameObject == start || collision.gameObject == end) {
+            transform.Rotate(Vector3.down * 180);
+            target = 1 - target;
         }
         if (collision.gameObject.CompareTag("Destroyer"))
         {

@@ -37,6 +37,7 @@ public class TransicionEscena : MonoBehaviour
 
     IEnumerator CargarEscena(int escenaIndex)
     {
+        PlayerPrefs.DeleteAll();
         transicion.SetTrigger("InicioTransicion");
         transicion.SetBool("TransicionActiva", true);
         yield return new WaitForSeconds(tiempoTransicion);
