@@ -27,16 +27,17 @@ public class SentimientosP : MonoBehaviour
     // 9 = interactuar con objetos
     // 10 = fuerza lanzamiento objetos
     // 11 = timer por sentimientos
+    // 12 = vida max
 
     static public Dictionary<int, List<float>> SentimientosConfig = new Dictionary<int, List<float>>();
-    static public List<float> mundoOscuridad = new List<float>{      100, 50,  4, 2,    0.0075f, 6, 2,     0, 0.5f,  1, 0.5f, 25 }; 
-    static public List<float> estadoNormal = new List<float>{        100, 100, 6, 2,    0.005f,  10, 1.5f,  0, 2f,     0, 1,    -1 }; //-1 para infinito
-    static public List<float> estadoOdio = new List<float> {         100, 50,  6, 3,    0.0025f, 7, 1,     1, 2,     0, 2,    20 };
-    static public List<float> estadoTristeza = new List<float>{      100, 50,  4, 1.5f, 0.008f,  5, 0.75f, 1, 0.5f,  0, 0.5f, 20 };
-    static public List<float> estadoEnvidia = new List<float>{       100, 50,  5, 1.5f, 0.0075f, 6, 0.75f, 2, 1.5f,  0, 2,    20 };
-    static public List<float> estadoCulpa = new List<float>{         100, 50,  5, 3,    0.005f,  8, 1f,    2, 2,     0, 0.1f, 20 };
-    static public List<float> estadoRabia = new List<float>{         100, 50,  5, 4,    0.0075f, 7, 1.25f, 2, 2.5f,  0, 2.5f, 20 };
-    static public List<float> estadoDesesperacion = new List<float>{ 100, 50,  8, 2,    0.0025f, 8, 2,     3, 1.25f, 0, 3,    20 };
+    static public List<float> mundoOscuridad = new List<float>{      100, 50,  4, 2,    0.0075f, 6, 2,     0, 0.5f,  1, 0.5f, 25, 100 }; 
+    static public List<float> estadoNormal = new List<float>{        100, 100, 6, 2,    0.005f,  10, 1.5f,  0, 2f,     0, 1,    -1, 100 }; //-1 para infinito
+    static public List<float> estadoOdio = new List<float> {         100, 50,  6, 3,    0.0025f, 7, 1,     1, 2,     0, 2,    20, 100 };
+    static public List<float> estadoTristeza = new List<float>{      100, 50,  4, 1.5f, 0.008f,  5, 0.75f, 1, 0.5f,  0, 0.5f, 20, 100 };
+    static public List<float> estadoEnvidia = new List<float>{       100, 50,  5, 1.5f, 0.0075f, 6, 0.75f, 2, 1.5f,  0, 2,    20, 100 };
+    static public List<float> estadoCulpa = new List<float>{         100, 50,  5, 3,    0.005f,  8, 1f,    2, 2,     0, 0.1f, 20, 100 };
+    static public List<float> estadoRabia = new List<float>{         100, 50,  5, 4,    0.0075f, 7, 1.25f, 2, 2.5f,  0, 2.5f, 20, 100 };
+    static public List<float> estadoDesesperacion = new List<float>{ 100, 50,  8, 2,    0.0025f, 8, 2,     3, 1.25f, 0, 3,    20, 100 };
 
 
     void Awake()

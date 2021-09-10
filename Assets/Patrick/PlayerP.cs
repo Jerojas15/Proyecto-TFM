@@ -19,6 +19,7 @@ public class PlayerP : MonoBehaviour
     [SerializeField] private int mapeoSentimiento;
     [SerializeField] private float vida;
     [SerializeField] private float energia;
+    [SerializeField] private float vidaMax;
 
     /*Caminar, Correr y Dash*/
     [Header("Caminar, Correr y Dash")]
@@ -61,6 +62,7 @@ public class PlayerP : MonoBehaviour
     [SerializeField] private GameObject roca; // para pruebas
     [SerializeField] private Transform posLanzamiento; // posicion para lanzar objeto 
     [SerializeField] private bool atravesarObjetos;
+    [SerializeField] private HealthBar healthBar;
 
     /*Canvas*/
     [SerializeField] private Text txtMecanicas;
@@ -209,6 +211,7 @@ public class PlayerP : MonoBehaviour
         else this.atravesarObjetos = false;
         this.fuerzaLanzarObjetos = sistemaSentimientos[mapeoSentimiento][10];
         this.tiempoSentimiento = sistemaSentimientos[mapeoSentimiento][11];
+        this.vidaMax = sistemaSentimientos[mapeoSentimiento][12];
 
         //txtMecanicas.text = "vida " + sistemaSentimientos[mapeoSentimiento][0] + '\n' + "energia " + sistemaSentimientos[mapeoSentimiento][1] + '\n' + "caminar " + sistemaSentimientos[mapeoSentimiento][2] + '\n' + "+ correr " + sistemaSentimientos[mapeoSentimiento][3] + '\n' + "+ dash " + sistemaSentimientos[mapeoSentimiento][4] + '\n' + "fuerza salto " + sistemaSentimientos[mapeoSentimiento][5] + '\n' + "+ salto adicional " + sistemaSentimientos[mapeoSentimiento][6] + '\n' + "+ num saltos " + sistemaSentimientos[mapeoSentimiento][7] + '\n' + "gravedad " + sistemaSentimientos[mapeoSentimiento][8] + '\n' + "interactuar con objetos " + sistemaSentimientos[mapeoSentimiento][9] + '\n' + "fuerza lanzamiento objetos " + sistemaSentimientos[mapeoSentimiento][10] + '\n' + "timer por sentimientos " + sistemaSentimientos[mapeoSentimiento][11] + '\n';
         //txtMecanicas.text = "caminar " + sistemaSentimientos[mapeoSentimiento][2] + '\n' + "+ correr " + sistemaSentimientos[mapeoSentimiento][3] + '\n' + "fuerza salto " + sistemaSentimientos[mapeoSentimiento][5] + '\n'  + "+ num saltos " + sistemaSentimientos[mapeoSentimiento][7] + '\n' + "gravedad " + sistemaSentimientos[mapeoSentimiento][8] + '\n' + "fuerza lanzamiento objetos " + sistemaSentimientos[mapeoSentimiento][10];
@@ -353,6 +356,7 @@ public class PlayerP : MonoBehaviour
 
     public void reducirVida(int valor) {
         this.vida -= valor;
+        healthBar.SetHealth((int) this.vida);
         Debug.Log("Hace dano, vida: " + this.vida);
     }
 
@@ -392,5 +396,9 @@ public class PlayerP : MonoBehaviour
 
     public float GetVida() {
         return this.vida;
+    }
+
+    public float GetMaxVida() {
+        return this.vidaMax;
     }
 }
