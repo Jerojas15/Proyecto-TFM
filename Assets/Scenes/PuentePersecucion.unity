@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.042521603, g: 0.19112435, b: 0.28418088, a: 1}
+  m_IndirectSpecularColor: {r: 0.042708457, g: 0.19110459, b: 0.28409743, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5637,6 +5637,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6908286917634367640, guid: c5059b641515d9a4a836159a241f8dd4,
         type: 3}
+      propertyPath: RastroDash
+      value: 
+      objectReference: {fileID: 6281761362065942196, guid: 155f7b6e5a5f9bc438defa441896cd86,
+        type: 3}
+    - target: {fileID: 6908286917634367640, guid: c5059b641515d9a4a836159a241f8dd4,
+        type: 3}
       propertyPath: uiElements
       value: 
       objectReference: {fileID: 1022111400}
@@ -5645,6 +5651,12 @@ PrefabInstance:
       propertyPath: oscuridadact
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6908286917634367640, guid: c5059b641515d9a4a836159a241f8dd4,
+        type: 3}
+      propertyPath: PisarAnimacion
+      value: 
+      objectReference: {fileID: 3488207743442926565, guid: 0c26ca109dc6ab544a05bcdae5bd58a0,
+        type: 3}
     - target: {fileID: 6908286918021590512, guid: c5059b641515d9a4a836159a241f8dd4,
         type: 3}
       propertyPath: m_Layer
@@ -6260,7 +6272,7 @@ Animator:
   m_GameObject: {fileID: 1007140872}
   m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 059e65e9f80fa5f4f819238d0b9a0544, type: 2}
+  m_Controller: {fileID: 9100000, guid: bede94ee53ff01c4cb720fcce10256a3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

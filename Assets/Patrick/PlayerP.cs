@@ -35,6 +35,7 @@ public class PlayerP : MonoBehaviour
     private bool isDashing;
     private bool permitirDash = true;
     IEnumerator dashCoroutine;
+    [SerializeField] private GameObject RastroDash;
 
     /*Salto y Gravedad*/
     [Header("Salto y Gravedad")]
@@ -50,6 +51,7 @@ public class PlayerP : MonoBehaviour
     private float saltosExtra;
     private float contadorTiempoSalto;
     [SerializeField] private float tiempoSalto;
+    [SerializeField] private GameObject PisarAnimacion;
 
     /*Extras*/
     [Header("Extras")]
@@ -279,7 +281,9 @@ public class PlayerP : MonoBehaviour
         {
             animator.SetTrigger("doJump");
             rb.velocity = Vector2.up * (fuerzaSalto + fuerzaAdicSalto);
+            Destroy(Instantiate(PisarAnimacion, this.transform.position, this.transform.rotation), 1f);
         }
+        
         /*if (Input.GetButton("Salto") && estaEnPiso == false)
         {
             if (contadorTiempoSalto > 0)
@@ -373,6 +377,8 @@ public class PlayerP : MonoBehaviour
 
     IEnumerator DashCoroutine(float dashDuracion, float dashTiempoCalma)
     {
+        
+        Destroy(Instantiate(RastroDash, new Vector3(this.transform.position.x, this.transform.position.y+2.5f, this.transform.position.z), this.transform.rotation), 0.25f);
         isDashing = true;
         permitirDash = false;
         rb.gravityScale = 0;
