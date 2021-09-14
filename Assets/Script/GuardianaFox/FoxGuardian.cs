@@ -64,6 +64,18 @@ public class FoxGuardian : MonoBehaviour
         fase2anim.Play();
 
     }
+
+    public IEnumerator reactive()
+    {
+        //Print the time of when the function is first called.
+        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+        
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(3);
+        target = vacio.transform;
+
+    }
     public void ShootObjects()
     {
         float rand;
@@ -77,6 +89,7 @@ public class FoxGuardian : MonoBehaviour
             }
             else if (vida == 2)
             {
+                //transform.position = col2ndfase.transform.position;
                 col2ndfase.SetActive(true);
                 trampolin.transform.position = new Vector3(col2ndfase.transform.position.x - 10f,trampolin.transform.position.y,trampolin.transform.position.z);
 
@@ -133,23 +146,26 @@ public class FoxGuardian : MonoBehaviour
         {
 
             if (ffCount == 3)
-            {  
-                target = vacio.transform;
+            {
+                StartCoroutine(reactive());
+                ffCount = 0;
             }
 
             if (gameObject.transform.position.x == finzona.transform.position.x)
             {
+                ffCount += 1;
                 transform.Rotate(Vector3.down * 180);
                 target = iniciozona.transform;
             }
             if (gameObject.transform.position.x == iniciozona.transform.position.x)
             {
-                ffCount += 1;
+                
                 transform.Rotate(Vector3.down * 180);
                 target = finzona.transform;
             }
 
-                transform.localPosition = Vector2.MoveTowards(transform.localPosition, target.localPosition, speed * Time.deltaTime);
+           
+            transform.position = Vector2.MoveTowards(transform.localPosition, target.position, speed * Time.deltaTime);
             Debug.Log("target "+ target);
            
         }
@@ -161,11 +177,11 @@ public class FoxGuardian : MonoBehaviour
     {
 
         //Sistema de resta de vida
-        if (collision.gameObject.CompareTag("Chuzo"))
-        {
-            vida -= 1;
-            Destroy(collision.gameObject, 3);
-        }
+        //if (collision.gameObject.CompareTag("Chuzo"))
+        //{
+        //    vida -= 1;
+        //    Destroy(collision.gameObject, 3);
+        //}
         //Sistema de resta de vida
     }
    

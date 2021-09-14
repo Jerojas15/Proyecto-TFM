@@ -17,6 +17,8 @@ TagManager:
   - Inicio
   - Fin
   - Inicio
+  - Boss
+  - letrero
   layers:
   - Default
   - TransparentFX

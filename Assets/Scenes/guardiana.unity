@@ -1897,6 +1897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 302539b9500f2be4eac26074d2f80019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foxGuardian: {fileID: 2085937255}
 --- !u!1 &183154108
 GameObject:
   m_ObjectHideFlags: 0
@@ -6327,6 +6328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 302539b9500f2be4eac26074d2f80019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foxGuardian: {fileID: 0}
 --- !u!4 &558477829 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2089788845867259552, guid: 90f88df09d61ef2429b9f04608cdd089,
@@ -7531,6 +7533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 302539b9500f2be4eac26074d2f80019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foxGuardian: {fileID: 2085937255}
 --- !u!50 &620323259
 Rigidbody2D:
   serializedVersion: 4
@@ -11740,7 +11743,7 @@ GameObject:
   - component: {fileID: 1236301428}
   m_Layer: 0
   m_Name: Collider 2nd fase
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11758,7 +11761,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.169039, y: 11.416022}
+  m_Offset: {x: -1.9440451, y: 10.120001}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -11769,7 +11772,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.338077, y: 23.832045}
+  m_Size: {x: 7.1403723, y: 21.240005}
   m_EdgeRadius: 0
 --- !u!4 &1236301429
 Transform:
@@ -13317,6 +13320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 302539b9500f2be4eac26074d2f80019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foxGuardian: {fileID: 2085937255}
 --- !u!50 &1361469529
 Rigidbody2D:
   serializedVersion: 4
@@ -19173,6 +19177,11 @@ PrefabInstance:
       propertyPath: m_Bounds.m_Extent.y
       value: 7.3899984
       objectReference: {fileID: 0}
+    - target: {fileID: -4787603820632720292, guid: d92cd69c1d3935946bd90e99a9a23b8d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
     - target: {fileID: -4040421187982599229, guid: d92cd69c1d3935946bd90e99a9a23b8d,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
@@ -19202,6 +19211,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 5.79
+      objectReference: {fileID: 0}
+    - target: {fileID: -2673991751062344800, guid: d92cd69c1d3935946bd90e99a9a23b8d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: -2280669341015946236, guid: d92cd69c1d3935946bd90e99a9a23b8d,
         type: 3}
@@ -19403,10 +19417,25 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 663369473535188013, guid: d92cd69c1d3935946bd90e99a9a23b8d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664275356305888326, guid: d92cd69c1d3935946bd90e99a9a23b8d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
     - target: {fileID: 2627312887796102481, guid: d92cd69c1d3935946bd90e99a9a23b8d,
         type: 3}
       propertyPath: m_Name
       value: EnemyZorra
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627312887796102481, guid: d92cd69c1d3935946bd90e99a9a23b8d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: 5194978107824253840, guid: d92cd69c1d3935946bd90e99a9a23b8d,
         type: 3}
