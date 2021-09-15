@@ -15,6 +15,9 @@ public class MenuController : MonoBehaviour
     [SerializeField] private GameObject letreroControles;
     [SerializeField] private GameObject letreroSalir;
 
+    public void Start() {
+        Cursor.visible = true;
+    }
     public void Play()
     {
         SceneManager.LoadScene("Villa");
