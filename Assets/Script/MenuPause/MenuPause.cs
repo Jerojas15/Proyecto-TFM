@@ -22,6 +22,8 @@ public class MenuPause : MonoBehaviour
     private GameObject hojasDestroy;
     private GameObject hojasSecasDestroy;
 
+    [SerializeField] private GameObject canvasControles;
+    public static bool canvasControlesFlag;
     [SerializeField] private GameObject musicaGameObject;
     [SerializeField] private GameObject sonidoGameObject;
     [SerializeField] private Sprite cuadroMarcado;
@@ -47,6 +49,8 @@ public class MenuPause : MonoBehaviour
         indexPausaAjustes = 0;
         canvasPausa.SetActive(false);
         canvasPausaAjustes.SetActive(false);
+        canvasControles.SetActive(false);
+        canvasControlesFlag = false;
 
         musicaVolumen = true;
         sonidoVolumen = true;
@@ -102,12 +106,13 @@ public class MenuPause : MonoBehaviour
                     break;
             }
 
-            if (Input.GetKeyDown(KeyCode.KeypadEnter))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 switch (indexPausa)
                 {
                     case 0:
                         Despausar();
+                        canvasControles.SetActive(false);
                         break;
                     case 1:
                         canvasPausa.SetActive(false);
@@ -165,12 +170,21 @@ public class MenuPause : MonoBehaviour
                     break;               
             }
 
-            if (Input.GetKeyDown(KeyCode.KeypadEnter))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 switch (indexPausaAjustes)
                 {
                     case 0:
-                        //Despausar();
+                        if(canvasControlesFlag == true)
+                        {
+                            canvasControlesFlag = false;
+                            canvasControles.SetActive(true);
+                        }
+                        else
+                        {
+                            canvasControlesFlag = true;
+                            canvasControles.SetActive(false);
+                        }
                         break;
                     case 1:
                         if(musicaVolumen == true)
@@ -203,6 +217,7 @@ public class MenuPause : MonoBehaviour
                         canvasPausaAjustes.SetActive(false);
                         estaPausado = true;
                         estaPausadoAjustes = false;
+                        canvasControles.SetActive(false);
                         break;
                 }
             }
