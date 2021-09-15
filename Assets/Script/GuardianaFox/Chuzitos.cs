@@ -15,7 +15,7 @@ public class Chuzitos : MonoBehaviour
         if (collision.gameObject.CompareTag("Boss"))
         {
             foxGuardian.vida -= 1;
-            Destroy(gameObject,2);
+            Destroy(gameObject);
         }
     }
 }

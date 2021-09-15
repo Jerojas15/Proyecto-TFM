@@ -146,14 +146,14 @@ public class PlayerP : MonoBehaviour
         lanzarObjeto();
 
         /* OCULTAR OBJETOS OSCURIDAD*/
-        if (Input.GetButtonDown("CambiarMundo") && oscuridadact.activeSelf == false)
+        if (Input.GetButtonDown("CambiarMundo") && oscuridad.activeSelf == false)
 
         {
-            oscuridadact.SetActive(true);
+            oscuridad.SetActive(true);
         }
-        else if (Input.GetButtonDown("CambiarMundo") && oscuridadact.activeSelf == true)
+        else if (Input.GetButtonDown("CambiarMundo") && oscuridad.activeSelf == true)
         {
-            oscuridadact.SetActive(false);
+            oscuridad.SetActive(false);
         }
 
 

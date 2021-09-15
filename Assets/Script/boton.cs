@@ -6,6 +6,7 @@ public class boton : MonoBehaviour
 {
 
     public GameObject objeto;
+    public GameObject cartel;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,19 @@ public class boton : MonoBehaviour
         {
             Destroy(objeto);
            
+        }
+
+        if (collision.CompareTag("Player"))
+        {
+            cartel.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            cartel.SetActive(false);
         }
     }
 }

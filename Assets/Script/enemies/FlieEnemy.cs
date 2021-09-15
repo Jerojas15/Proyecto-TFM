@@ -75,6 +75,7 @@ public class FlieEnemy : MonoBehaviour
 
     private void attack() {
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, attackSpeed * Time.deltaTime);
+       // die();
     }
 
     private void die() {

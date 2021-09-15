@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GuardEnemy : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GuardEnemy : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private int strength;
     private int target;
+
 
    
     // Start is called before the first frame update

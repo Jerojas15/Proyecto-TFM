@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FoxGuardian : MonoBehaviour
 {
     public int vida;
+    public GameObject trampfinal;
     public GameObject pantera;
     public GameObject abeja;
     private float timer;
@@ -20,8 +22,11 @@ public class FoxGuardian : MonoBehaviour
     public int ffCount = 0;
     public Animation fase2anim;
     public bool confirm2nd = false;
-   // public Animation fase3anim;
-   // public Animation golpeanim;
+    public GameObject lamento;
+    private PlayerP life;
+    public string nombreScena;
+    // public Animation fase3anim;
+    // public Animation golpeanim;
 
 
     // Start is called before the first frame update
@@ -65,17 +70,16 @@ public class FoxGuardian : MonoBehaviour
 
     }
 
-    public IEnumerator reactive()
+    IEnumerator returne()
     {
-        //Print the time of when the function is first called.
-        Debug.Log("Started Coroutine at timestamp : " + Time.time);
-
         
-        //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(3);
-        target = vacio.transform;
-
+        yield return new WaitForSeconds(5f);
+        ffCount = 0;
+        FaseFinal = true;
+        speed = 19;
     }
+
+
     public void ShootObjects()
     {
         float rand;
@@ -135,21 +139,39 @@ public class FoxGuardian : MonoBehaviour
         }
         else if (vida==1)
         {
-
-            gameObject.GetComponent<SpriteRenderer>().sprite = SpriteFinal;
+            fase2anim.clip = fase2anim.GetClip("ZorraFASE1");
+            fase2anim.Play();
+            trampfinal.SetActive(true);
+            //gameObject.GetComponent<SpriteRenderer>().sprite = SpriteFinal;
             FaseFinal = true;
            
-        }  
+        }
+        else if (vida ==0)
+        {
+            SceneManager.LoadScene(nombreScena);
+            lamento.SetActive(true);
+            
+            FaseFinal = false;
+            fase2anim.clip = fase2anim.GetClip("ZorraFASE1");
+            fase2anim.Play();
+            
+
+
+            //gameObject.transform.position = new Vector3(gameObject.transform.position.x + 10f,gameObject.transform.position.y,gameObject.transform.position.z);
+        }
         //disparando panteras y abjeas en el tiempo 
+
+        
 
         if (FaseFinal == true)
         {
 
             if (ffCount == 3)
             {
-                StartCoroutine(reactive());
-                ffCount = 0;
-            }
+                FaseFinal = false;
+                speed = 0;
+                StartCoroutine(returne());
+             }
 
             if (gameObject.transform.position.x == finzona.transform.position.x)
             {
@@ -159,16 +181,16 @@ public class FoxGuardian : MonoBehaviour
             }
             if (gameObject.transform.position.x == iniciozona.transform.position.x)
             {
-                
+
                 transform.Rotate(Vector3.down * 180);
                 target = finzona.transform;
             }
-
-           
+                
             transform.position = Vector2.MoveTowards(transform.localPosition, target.position, speed * Time.deltaTime);
-            Debug.Log("target "+ target);
-           
+
+
         }
+        
 
     }
 
@@ -176,6 +198,11 @@ public class FoxGuardian : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            life.reducirVida(5);
+        }
         //Sistema de resta de vida
         //if (collision.gameObject.CompareTag("Chuzo"))
         //{
