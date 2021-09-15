@@ -7232,6 +7232,12 @@ PrefabInstance:
       objectReference: {fileID: 991564690}
     - target: {fileID: 6908286917634367640, guid: c5059b641515d9a4a836159a241f8dd4,
         type: 3}
+      propertyPath: RastroDash
+      value: 
+      objectReference: {fileID: 6281761362065942196, guid: 155f7b6e5a5f9bc438defa441896cd86,
+        type: 3}
+    - target: {fileID: 6908286917634367640, guid: c5059b641515d9a4a836159a241f8dd4,
+        type: 3}
       propertyPath: uiElements
       value: 
       objectReference: {fileID: 371849616}
@@ -7250,6 +7256,12 @@ PrefabInstance:
       propertyPath: oscuridadact
       value: 
       objectReference: {fileID: 480188955}
+    - target: {fileID: 6908286917634367640, guid: c5059b641515d9a4a836159a241f8dd4,
+        type: 3}
+      propertyPath: PisarAnimacion
+      value: 
+      objectReference: {fileID: 3488207743442926565, guid: 0c26ca109dc6ab544a05bcdae5bd58a0,
+        type: 3}
     - target: {fileID: 6908286917634367645, guid: c5059b641515d9a4a836159a241f8dd4,
         type: 3}
       propertyPath: m_Size.x
