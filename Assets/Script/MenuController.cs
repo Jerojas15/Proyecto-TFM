@@ -17,6 +17,7 @@ public class MenuController : MonoBehaviour
 
     public void Start() {
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
     public void Play()
     {
