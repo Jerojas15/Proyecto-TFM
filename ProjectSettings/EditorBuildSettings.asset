@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PuentePersecucion.unity
     guid: 002e77e2c46808f48956a3b79f480419
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/EscenaPruebasPatrick.unity
     guid: 14b575d945b0b73449b8815d06201231
   m_configObjects: {}
