@@ -159,9 +159,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -178,8 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  playerHealth: 0
-  playerMaxHealth: 0
+  playerHealth: {fileID: 0}
 --- !u!1 &737818631736731340
 GameObject:
   m_ObjectHideFlags: 0
