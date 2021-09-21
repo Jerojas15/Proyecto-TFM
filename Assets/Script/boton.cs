@@ -7,6 +7,7 @@ public class boton : MonoBehaviour
 
     public GameObject objeto;
     public GameObject cartel;
+    public AudioSource botton;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,7 @@ public class boton : MonoBehaviour
         if (Input.GetButtonDown("Interactuar") && collision.CompareTag("Player"))
         {
             Destroy(objeto);
-           
+           botton.Play();
         }
 
         if (collision.CompareTag("Player"))
