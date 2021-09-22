@@ -2,25 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class boton2Objetos : MonoBehaviour
+public class cartel : MonoBehaviour
 {
 
-    public GameObject objeto;
-    public GameObject objeto2;
-    public GameObject cartel;
-    public AudioSource botton;
+    public GameObject imagen;
+    public GameObject texto;
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            cartel.SetActive(true);
+            imagen.SetActive(true);
         }
 
         if (Input.GetButtonDown("Interactuar") && collision.CompareTag("Player"))
         {
-            Destroy(objeto);
-            Destroy(objeto2,5.0f);
-            botton.Play();
+            texto.SetActive(true);
 
         }
     }
@@ -29,7 +26,10 @@ public class boton2Objetos : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            cartel.SetActive(false);
+            imagen.SetActive(false);
+            texto.SetActive(false);
         }
     }
+    // Start is called before the first frame update
+    
 }

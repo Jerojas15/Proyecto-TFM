@@ -118,6 +118,14 @@ public class PlayerP : MonoBehaviour
         }
     }
 
+    public IEnumerator idle(int segundos)
+    {
+        yield return new WaitForSeconds(segundos);
+
+        oscuridad.SetActive(false);
+
+    }
+
     void Update()
     {
 
@@ -150,6 +158,8 @@ public class PlayerP : MonoBehaviour
 
         {
             oscuridad.SetActive(true);
+            StartCoroutine(idle(10));
+
         }
         else if (Input.GetButtonDown("CambiarMundo") && oscuridad.activeSelf == true)
         {

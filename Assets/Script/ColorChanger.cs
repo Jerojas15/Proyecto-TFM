@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
@@ -35,12 +36,22 @@ public class ColorChanger : MonoBehaviour {
             color.colorFilter.value = new Color(1, 1, 1, 0);
         }
     }
+    public IEnumerator idle(int segundos)
+    {
+        yield return new WaitForSeconds(segundos);
+
+        setColorFilter();
+
+    }
 
     void Update() {
         float playerDistance = Vector3.Distance(player.transform.position, startPoint.transform.position);
         float pointsDistance = Vector3.Distance(farestPoint.transform.position, startPoint.transform.position);
         if (Input.GetButtonDown("CambiarMundo")) {
             setColorFilter();
+            StartCoroutine(idle(10));
+
+
         }
         
         if (!isActive) {
@@ -61,4 +72,6 @@ public class ColorChanger : MonoBehaviour {
         Gizmos.color = Color.yellow;
         Gizmos.DrawSphere(startPoint.transform.position, fullRadius);
     }
+
+
 }
